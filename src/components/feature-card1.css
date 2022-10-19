@@ -1,0 +1,23 @@
+.feature-card1-feature-card {
+  width: 100%;
+  display: flex;
+  padding: 32px;
+  align-items: center;
+  flex-direction: column;
+}
+.feature-card1-image {
+  width: 100px;
+  object-fit: cover;
+}
+.feature-card1-text {
+  font-style: normal;
+  margin-top: var(--dl-space-space-unit);
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: var(--dl-space-space-unit);
+}
+.feature-card1-text1 {
+  color: var(--dl-color-gray-700);
+  text-align: center;
+}
+
