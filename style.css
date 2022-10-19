@@ -78,14 +78,14 @@
   background-color: var(--dl-color-gray-white);
 }
 .input {
-  color: var(--dl-color-secondary-400);
+  color: #000000;
   cursor: auto;
   padding: 0.5rem 1rem;
   font-family: Open Sans;
   border-color: var(--dl-color-secondary-400);
   border-width: 1px;
   border-radius: 4px;
-  background-color: var(--dl-color-gray-white);
+  background-color: rgba(241, 241, 241, 0.81);
 }
 .placeholder {
   color: var(--dl-color-gray-black);
