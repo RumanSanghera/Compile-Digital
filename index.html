@@ -54,6 +54,27 @@
       input::placeholder, textarea::placeholder {
          color: #d2d6da;
       }
+      .home-input2:focus ~ .label,
+      .home-input3:focus ~ .label,
+      .home-textarea:focus ~ .label,
+      .home-input1:focus ~ .label,
+      .home-input2:not(:focus):valid ~ .label,
+      .home-input3:not(:focus):valid ~ .label,
+      .home-textarea:not(:focus):valid ~ .label,
+      .home-input1:not(:focus):valid ~ .label{
+          top: -10px;
+          left: 0;
+          font-size: 11px;
+      }
+    </style>
+    <style data-section-id="dropdown">
+      [data-thq="thq-dropdown"]:hover > [data-thq="thq-dropdown-list"] {
+          display: flex;
+        }
+
+        [data-thq="thq-dropdown"]:hover > div [data-thq="thq-dropdown-arrow"] {
+          transform: rotate(90deg);
+        }
     </style>
     <link rel="stylesheet" href="./style.css" />
   </head>
@@ -93,7 +114,7 @@
               ></path>
             </svg>
           </div>
-          <div class="home-container1">
+          <div class="home-container01">
             <div data-type="BurgerMenu" class="home-burger-menu">
               <svg viewBox="0 0 1024 1024" class="home-icon06">
                 <path
@@ -104,7 +125,7 @@
           </div>
           <div data-type="MobileMenu" class="home-mobile-menu">
             <div class="home-nav2">
-              <div class="home-container2">
+              <div class="home-container02">
                 <img
                   alt="image"
                   src="https://presentation-website-assets.teleporthq.io/logos/logo.png"
@@ -137,28 +158,34 @@
           </div>
         </header>
         <div class="home-hero">
-          <div id="home" class="home-container3">
+          <div id="home" class="home-container03">
             <div class="home-card">
               <h1 class="home-text">Compile Digital</h1>
               <h1 class="home-text01 headingOne">Choose the best</h1>
               <span class="home-text02">
                 Get your website custom built for you to suit your needs
               </span>
-              <div class="home-container4">
-                <div class="home-container5">
-                  <div class="primary-pink-button-container">
+              <div class="home-container04">
+                <div class="home-container05">
+                  <a href="#contact" class="home-link1">
+                    <div class="primary-pink-button-container">
+                      <button
+                        class="primary-pink-button-button button buttonSmall"
+                      >
+                        <span>contact us</span>
+                      </button>
+                    </div>
+                  </a>
+                </div>
+                <a href="#features" class="home-link2">
+                  <div class="outline-gray-button-container">
                     <button
-                      class="primary-pink-button-button button buttonSmall"
+                      class="outline-gray-button-button button buttonSmall"
                     >
-                      <span>contact us</span>
+                      <span>read more</span>
                     </button>
                   </div>
-                </div>
-                <div class="outline-gray-button-container">
-                  <button class="outline-gray-button-button button buttonSmall">
-                    <span>read more</span>
-                  </button>
-                </div>
+                </a>
               </div>
             </div>
           </div>
@@ -168,7 +195,7 @@
           src="public/playground_assets/curved6-1500h.jpg"
           class="home-image2"
         />
-        <div class="home-features">
+        <div id="features" class="home-features">
           <h1 class="home-text03">
             <span>Explore our services</span>
             <br />
@@ -178,7 +205,7 @@
             i dont know what to write here but ill figure it out later ( Kuli
             BUTTER)
           </span>
-          <div class="home-container6">
+          <div class="home-container06">
             <div
               class="feature-card1-feature-card feature-card1-root-class-name3"
             >
@@ -233,10 +260,6 @@
             </div>
           </div>
         </div>
-        <h1 class="home-text07">
-          <span>Contact Us</span>
-          <br />
-        </h1>
         <section class="home-contact">
           <img
             alt="image"
@@ -248,34 +271,62 @@
             src="public/playground_assets/top.svg"
             class="home-top-wave-image"
           />
-          <form id="contact" class="home-form">
-            <input
-              type="text"
-              placeholder="Full Name"
-              class="home-input placeholder input"
-            />
-            <input type="text" placeholder="Email" class="home-input1 input" />
-            <input
-              type="text"
-              placeholder="Company Name"
-              class="home-input2 input"
-            />
-            <input
-              type="text"
-              placeholder="Company Website"
-              class="home-input3 input"
-            />
-            <textarea
-              placeholder="Message"
-              class="home-textarea textarea"
-            ></textarea>
-            <button type="submit" class="home-button1 button">
-              <span>
-                <span class="buttonSmall home-text11">sEND YOUR MESSAGE</span>
-                <br />
-              </span>
-            </button>
-          </form>
+          <div class="home-container07">
+            <h1 class="home-text07">
+              <span>Contact Us</span>
+              <br />
+            </h1>
+            <form id="contact" class="home-form">
+              <div class="home-container08">
+                <input
+                  type="text"
+                  required=""
+                  placeholder="Full Name"
+                  autocomplete="name"
+                  class="home-input placeholder input"
+                />
+              </div>
+              <div class="home-container09">
+                <input
+                  type="text"
+                  color="black"
+                  required=""
+                  placeholder="Email"
+                  autocomplete="email"
+                  class="home-input1 input"
+                />
+              </div>
+              <div class="home-container10">
+                <input
+                  type="text"
+                  required=""
+                  placeholder="Company"
+                  autocomplete="organization"
+                  class="home-input2 input"
+                />
+              </div>
+              <div class="home-container11">
+                <input
+                  type="text"
+                  required=""
+                  placeholder="Company Website"
+                  class="home-input3 input"
+                />
+              </div>
+              <div class="home-container12">
+                <textarea
+                  placeholder="Message"
+                  class="home-textarea textarea"
+                ></textarea>
+              </div>
+              <button type="submit" class="home-button1 button">
+                <span>
+                  <span class="buttonSmall home-text11">sEND YOUR MESSAGE</span>
+                  <br />
+                </span>
+              </button>
+            </form>
+          </div>
         </section>
         <footer class="footer-gray-footer footer-gray-root-class-name1">
           <div class="footer-gray-divider"></div>

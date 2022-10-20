@@ -3,12 +3,12 @@
   position: relative;
 }
 .outline-blue-button-button {
-  color: var(--dl-color-blue-500);
+  color: #17c1e8ff;
   cursor: pointer;
   background: white;
   transition: all .15s ease-in;
   padding-top: var(--dl-space-space-halfunit);
-  border-color: var(--dl-color-blue-500);
+  border-color: #17c1e8ff;
   border-width: 1px;
   padding-left: var(--dl-space-space-doubleunit);
   border-radius: var(--dl-radius-radius-radius5);

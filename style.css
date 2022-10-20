@@ -1,5 +1,4 @@
 :root {
-  --dl-color-blue-500: #17c1e8ff;
   --dl-color-gray-500: #595959;
   --dl-color-gray-700: #999999;
   --dl-color-gray-800: #D9D9D9;
@@ -87,12 +86,15 @@
   border-radius: 4px;
   background-color: rgba(241, 241, 241, 0.81);
 }
+.input:focus {
+  clip: safe;
+}
 .placeholder {
-  color: var(--dl-color-gray-black);
+  color: #000000;
+  width: auto;
   transition: 0.3s;
   border-width: 0px;
   border-radius: 0px;
-  background-color: rgba(241, 241, 241, 0.81);
   border-bottom-width: 2px;
 }
 .placeholder:focus {

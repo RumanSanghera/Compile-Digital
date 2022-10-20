@@ -3,7 +3,7 @@
   position: relative;
 }
 .next-button-button {
-  color: var(--dl-color-blue-500);
+  color: #17c1e8ff;
   display: flex;
   align-items: center;
   padding-top: var(--dl-space-space-halfunit);
@@ -19,7 +19,7 @@
   margin-right: var(--dl-space-space-halfunit);
 }
 .next-button-icon {
-  fill: var(--dl-color-blue-500);
+  fill: #17c1e8ff;
   width: var(--dl-size-size-unit);
   height: var(--dl-size-size-unit);
   transition: 0.3s;
