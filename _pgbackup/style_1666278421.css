@@ -115,23 +115,20 @@ textarea:focus,
     color: black;
 }
 
-.textareaC:focus ~ .label2,
-.textareaC:not(:focus):valid ~ .label2{
+.textarea:not(:focus):valid ~ .label2,
+textarea:focus ~ .label2 {
     top: -100px;
     left: 0;
     font-size: 10px;
-    
-    transform: translate(5px, -7vh);
+    transform: translate(5px, -5vh);
     transition: transform 330ms ease-in-out;
-
 }
 
 .input-text:focus ~ .label,
-.input-text:not(:focus):valid ~ .label{
+.input-text:not(:focus):valid ~ .label {
     top: -100px;
     left: 0;
     font-size: 10px;
-    
     transform: translate(5px, -5vh);
     transition: transform 330ms ease-in-out;
 }
@@ -228,6 +225,7 @@ input::placeholder {
     transform: translateY(-2em);
     pointer-events: none;
 }
+
 .label2 {
     font-size: 0.75rem;
     font-family: Open Sans;

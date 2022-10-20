@@ -70,7 +70,7 @@
     display: list-item;
 }
 
-.textarea {
+.textareaC {
     color: var(--dl-color-secondary-400);
     cursor: auto;
     padding: 0.5rem;
@@ -92,7 +92,7 @@
     font-family: Open Sans;
 }
 
-textarea,
+.textareaC,
 .input-text {
     width: 100%;
     height: 40px;
@@ -101,7 +101,7 @@ textarea,
     border-bottom-width: 2px;
 }
 
-textarea:focus,
+.textareaC:focus,
 .input-text:focus {
     outline: 0px;
     border-color: var(--dl-color-primary-500);
@@ -116,27 +116,24 @@ textarea:focus,
 }
 
 .textareaC:focus ~ .label2,
-.textareaC:not(:focus):valid ~ .label2{
+.textareaC:not(:focus):valid ~ .label2 {
     top: -100px;
     left: 0;
     font-size: 10px;
-    
     transform: translate(5px, -7vh);
     transition: transform 330ms ease-in-out;
-
 }
 
 .input-text:focus ~ .label,
-.input-text:not(:focus):valid ~ .label{
+.input-text:not(:focus):valid ~ .label {
     top: -100px;
     left: 0;
     font-size: 10px;
-    
     transform: translate(5px, -5vh);
     transition: transform 330ms ease-in-out;
 }
 
-textarea::placeholder,
+.textareaC::placeholder,
 input::placeholder {
     font-weight: bold;
     opacity: .5;
@@ -228,6 +225,7 @@ input::placeholder {
     transform: translateY(-2em);
     pointer-events: none;
 }
+
 .label2 {
     font-size: 0.75rem;
     font-family: Open Sans;
