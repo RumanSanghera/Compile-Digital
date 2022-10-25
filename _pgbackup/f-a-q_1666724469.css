@@ -431,7 +431,6 @@ summary {
     display: flex;
     justify-content: space-between;
     transition: height 1s ease;
-    border-top: 1px solid rgb(0, 0, 0);
 }
 
 summary::-webkit-details-marker {
@@ -440,52 +439,12 @@ summary::-webkit-details-marker {
 
 summary:after {
     content: "\002B";
-    cursor: pointer;
 }
 
 details {
     background-color: #bfb9b9;
     color: #fff;
     font-size: 1.5rem;
-}
-
-details[open] summary {
-    margin-bottom: .5em;
-}
-
-details[open] summary:after {
-    content: "\00D7";
-    cursor: pointer;
-}
-
-details[open] div {
-    padding: .5em 1em;
-}
-
-.accordion {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    transition: 0.4s;
-}
-
-.active,
-.accordion:hover {
-    background-color: #ccc;
-}
-
-.panel {
-    padding: 0 18px;
-    background-color: white;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
 }
 
 
