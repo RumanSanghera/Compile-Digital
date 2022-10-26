@@ -77,9 +77,7 @@
                 </div>                 
                 <img alt="image" src="public/playground_assets/back.jpg" class="home-image2"/> 
                 <div id="features" class="home-features"> 
-                    <h1 class="home-text03"> <span>Explore our services</span> <br/> <span></span> </h1> <span class="home-text06"> 
-            i dont know what to write here but ill figure it out later ( Kuli
-            BUTTER) </span> 
+                    <h1 class="home-text03"> <span>What Can We Offer ?</span> <br/> <span></span> </h1> <span class="home-text06">Project Coming Soon (Pre-Alpha)</span> 
                     <div class="home-container06"> 
                         <div class="feature-card1-feature-card feature-card1-root-class-name3"> 
                             <img alt="image" src="public/playground_assets/features1-200h.png" class="feature-card1-image"/> 
@@ -104,23 +102,24 @@
                     <img alt="image" src="public/playground_assets/top.svg" class="home-top-wave-image"/> 
                     <div class="home-container07"> 
                         <h1 class="home-text07"> <span>Contact Us</span> <br/> </h1> 
-                        <form action="https://formsubmit.co/rumansanghera@gmail.com" method="POST" id="contact" class="home-form"> 
+                        <form action="https://getform.io/f/18786eab-8a3b-4f8e-80cf-dbf83da1ed5f" method="POST" id="contact" class="home-form" enctype="multipart/form-data" target="_blank"> 
                             <div class="home-container08"> 
-                                <input type="text" required autocomplete="name" class="input-text"/><span class="label">Full Name</span>
+                                <input name="name" type="text" required autocomplete="name" class="input-text"/>
+                                <span class="label">Full Name</span>
                             </div>                             
                             <div class="home-container09"> 
-                                <input type="text" color="black" required autocomplete="email" class="input-text"/> <span class="label">Email</span>
+                                <input name="email" type="text" color="black" required autocomplete="email" class="input-text"/> <span class="label">Email</span>
                             </div>                             
                             <div class="home-container10"> 
-                                <input type="text" required autocomplete="organization" class="input-text"/> <span class="label">Company</span>
+                                <input name="company" type="text" required autocomplete="organization" class="input-text"/> <span class="label">Company</span>
                             </div>                             
                             <div class="home-container11"> 
-                                <input type="text" required class="input-text"/> <span class="label">Company Website</span>
+                                <input name="website" type="text" required class="input-text"/> <span class="label">Company Website</span>
                             </div>                             
                             <div class="home-container12"> 
-                                <textarea class="textareaC" required></textarea> <span class="label2">Message</span>
+                                <textarea class="textareaC" name="message" required></textarea> <span class="label2">Message</span>
                             </div>                             
-                            <button type="submit" class="home-button1 button"> <span> <span class="buttonSmall home-text11">SEND</span> <br/> </span> 
+                            <button type="submit" onclick="myFunction()" class="home-button1 button"> <span> <span class="buttonSmall home-text11">SEND</span> <br/> </span> 
                             </button>                             
                         </form>                         
                     </div>                     
@@ -160,5 +159,15 @@
         </div>         
         <script src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>         
         <script data-section-id="header" src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>         
+        <script>
+function myFunction() 
+{
+ var delayInMilliseconds = 1000; //1 second
+
+setTimeout(function() {
+  document.getElementById("contact").reset();
+}, delayInMilliseconds);
+}
+</script>         
     </body>     
 </html>
