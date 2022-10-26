@@ -87,6 +87,7 @@
     height: 20%;
     width: 100%;
     padding: 0.5rem 1rem;
+    border-bottom-width: 2px;
     background-color: transparent;
     font-family: Open Sans;
 }
@@ -114,7 +115,7 @@ textarea:focus,
 .textareaC:focus ~ .label2,
 .textareaC:not(:focus):valid ~ .label2 {
     font-size: 10px;
-    transform: translate(0px, -7vh);
+    transform: translate(5px, -7vh);
     transition: transform 330ms ease-in-out;
 }
 
@@ -131,7 +132,7 @@ textarea::placeholder,
 input::placeholder {
     font-weight: 900;
     opacity: .5;
-    color: rgb(0, 0, 0);
+    color: rgb(224, 0, 0);
 }
 
 .placeholder:focus {

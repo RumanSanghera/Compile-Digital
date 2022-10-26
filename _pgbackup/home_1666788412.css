@@ -379,7 +379,6 @@
     width: 94px;
     height: 93px;
     object-fit: cover;
-    float: left;
 }
 
 .home-nav {
@@ -638,7 +637,7 @@
 
 .home-features {
     width: 100%;
-    height: 100%;
+    height: 730px;
     display: flex;
     padding: 48px;
     max-width: 1400px;
@@ -698,8 +697,7 @@
     transform: translate(-50%,-50%);
     box-shadow: 5px 5px 10px 0px #545454;
     border-radius: var(--dl-radius-radius-radius75);
-    backdrop-filter: saturate(200%) blur(30px);
-    background-color: hsla(0,0%,100%,.8);
+    background-color: rgba(241, 241, 241, 0.81);
 }
 
 .home-text07 {

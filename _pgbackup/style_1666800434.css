@@ -87,6 +87,7 @@
     height: 20%;
     width: 100%;
     padding: 0.5rem 1rem;
+    border-bottom-width: 2px;
     background-color: transparent;
     font-family: Open Sans;
 }
@@ -94,7 +95,7 @@
 textarea,
 .input-text {
     width: 100%;
-    height: 5%;
+    height: 40px;
     background-color: transparent;
     outline: 0;
     border-bottom-width: 2px;
@@ -108,13 +109,16 @@ textarea:focus,
 
 .placeholder {
     transition: 0.3s;
+    border-width: 0px;
+    border-radius: 0px;
+    border-bottom-width: 2px;
     color: black;
 }
 
 .textareaC:focus ~ .label2,
 .textareaC:not(:focus):valid ~ .label2 {
     font-size: 10px;
-    transform: translate(0px, -7vh);
+    transform: translate(5px, -7vh);
     transition: transform 330ms ease-in-out;
 }
 
@@ -131,10 +135,11 @@ textarea::placeholder,
 input::placeholder {
     font-weight: 900;
     opacity: .5;
-    color: rgb(0, 0, 0);
+    color: rgb(224, 0, 0);
 }
 
 .placeholder:focus {
+    outline: 0px;
     border-color: var(--dl-color-primary-500);
 }
 
