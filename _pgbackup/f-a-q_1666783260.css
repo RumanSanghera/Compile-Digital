@@ -520,13 +520,13 @@ details[open] div {
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 
-    /* border-bottom-width: 1px; */
+    /* border-bottom-width: 1px;*
+
 }
 
 .FAQpara {
     width: 100%;
     padding-top: 20px;
     padding-bottom: 20px;
+} */
 }
-
-

@@ -480,28 +480,18 @@ details[open] div {
     cursor: pointer;
     padding: 18px;
     width: 100%;
-    font-weight: 600;
+
+    /* border: none */
     text-align: left;
+
+    /* outline: none */
     font-size: 15px;
     transition: 0.4s;
-}
-
-.accordion:after {
-    content: '\02795';
-
-    /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
-    color: rgb(184, 184, 184);
-    float: right;
-    margin-left: 5px;
+    border-bottom-width: 1px;
 }
 
 .accordion:hover {
     background-color: #ccc;
-}
-
-.accordion:active {
-    content: "\2796";
 }
 
 .panel {
@@ -510,23 +500,6 @@ details[open] div {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-    border-bottom-width: 1px;
-}
-
-.lastpanel {
-    padding: 0 18px;
-    background-color: white;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-
-    /* border-bottom-width: 1px; */
-}
-
-.FAQpara {
-    width: 100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
 }
 
 
