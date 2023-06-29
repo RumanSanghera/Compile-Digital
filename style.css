@@ -46,7 +46,7 @@
   transform: none !important;
 }
 .button {
-  color: var(--dl-color-secondary-400);
+  color: #000000;
   display: inline-block;
   padding: 0.5rem 1rem;
   font-family: Open Sans;
