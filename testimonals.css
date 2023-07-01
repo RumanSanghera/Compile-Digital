@@ -493,12 +493,13 @@
   border-radius: var(--dl-radius-radius-round);
 }
 .testimonals-previewIMG {
-    height: 100%;
-    max-width: 100%;
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 16px;
-    object-fit: cover;
+  height: 100%;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 16px;
+  object-fit: cover;
+  object-position: center;
     
 }
 .testimonals-testimonial-card2 {
