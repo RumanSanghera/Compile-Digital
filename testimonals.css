@@ -1,3 +1,6 @@
+
+
+
 .footer-gray-footer {
   width: 100%;
   height: auto;
@@ -365,13 +368,48 @@
 .testimonals-testimonial-card {
   display: flex;
   padding: 32px;
-  max-width: 1400px;
+  /*max-width: 1400px;*/
   background: #fff;
   box-shadow: 5px 5px 10px 0px rgba(18, 18, 18, 0.1);
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
+  transition: width 0.3s, height 0.3s;
 }
+.hiddenDiv{
+  display: none;
+  padding: 20px;
+  box-shadow: 5px 5px 10px 0px rgba(18, 18, 18, 0.1);
+  align-items: center;
+  flex-direction: column;
+  z-index: 1002;
+  position: fixed;
+  background-color: #f2f2f2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  padding-left: 15%;
+  padding-right: 15%;
+  height: 90%;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+
+
+}
+
+.overlay {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(7px); /* Apply the blur effect */
+  z-index: 1001; /* Adjust the z-index value as needed */
+  background-color: hsl(0deg 0% 13.54% / 75%);
+}
+
 .testimonals-icon16 {
   width: 2rem;
   margin-bottom: 32px;
@@ -385,7 +423,8 @@
 .testimonals-text04 {
   color: var(--dl-color-gray-500);
   text-align: center;
-  margin-bottom: 48px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .testimonals-text05 {
   font-size: 1.5rem;
@@ -509,10 +548,16 @@
   .testimonals-testimonial {
     padding-top: 15%;
   }
+  .hiddenDiv{
+    width: 90%;
+  }
 }
 @media(max-width: 991px) {
   .testimonals-testimonial {
     padding-top: 20%;
+  }
+  .testimonals-text04 {
+    font-size: 15px;
   }
   .testimonals-icon06 {
     display: flex;
@@ -535,8 +580,12 @@
   .testimonals-text15 {
     align-self: center;
   }
+  
 }
 @media(max-width: 767px) {
+  .testimonals-text04 {
+    font-size: 12px;
+  }
   .testimonals-header {
     padding-left: 32px;
     padding-right: 32px;
@@ -571,6 +620,10 @@
   }
 }
 @media(max-width: 479px) {
+  .testimonals-text04 {
+    font-size: 11px;
+    line-height: 1.5;
+  }
   .testimonals-testimonial {
     padding-top: 40%;
   }
