@@ -241,18 +241,48 @@
         </div>
       </div>
       <img alt="image" src="public/back.jpg" class="home-image2" />
+
+      <script>
+        function isElementInViewport(element) {
+          const rect = element.getBoundingClientRect();
+          return (
+            rect.top >= -50 &&
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight)
+          );
+        }
+
+        function handleScroll() {
+          const featuresElement = document.getElementById('feature-text');
+          if (isElementInViewport(featuresElement)) {
+            featuresElement.classList.add('fade-in');
+            const cards = document.querySelectorAll('.home-features .feature-card1-feature-card, .home-features .feature-card2-feature-card, .home-features .feature-card3-feature-card, .home-features .feature-card4-feature-card');
+            let delay = 0.2; // Initial delay for the first card
+            for (let i = 0; i < cards.length; i++) {
+              setTimeout(function (card) {
+                card.classList.add('fade-in');
+              }, delay * 1000, cards[i]);
+              delay += 0.2; // Increment the delay for subsequent cards
+            }
+
+            window.removeEventListener('scroll', handleScroll); // Remove the event listener after animation
+          }
+        }
+
+        window.addEventListener('scroll', handleScroll);
+      </script>
       <div id="features" class="home-features">
-        <h1 class="home-text03">
-          
-        </h1>
-        <h1 class="home-text03"> <span>What Can We Offer ?</span> <br /> <span></span> </h1> <span
-          class="home-text06">Our website building business provides a comprehensive range of services to
-          create tailored and professional online presences. Our skilled team collaborates closely with
-          clients, understanding their unique needs and goals. From custom design to responsive development,
-          SEO, and social media integration, we deliver visually stunning, user-friendly websites that drive
-          results.</span>
+
+        <div id="feature-text" class="featureText">
+          <h1 class="home-text03"> What Can We Offer ?  </h1> 
+          <p class="home-text06">Our website building business provides a comprehensive range of services to
+            create tailored and professional online presences. Our skilled team collaborates closely with
+            clients, understanding their unique needs and goals. From custom design to responsive development,
+            SEO, and social media integration, we deliver visually stunning, user-friendly websites that drive
+            results.</p>
+        </div>
+
         <div class="home-container06">
-          <div class="feature-card1-feature-card feature-card1-root-class-name3">
+          <div class="feature-card1-feature-card">
             <img alt="image" src="public/features1-200h.png" class="feature-card1-image" />
             <h2 class="feature-card1-text"><span>E-Commerce</span></h2>
             <span class="feature-card1-text1">
@@ -261,7 +291,7 @@
                 integration, our comprehensive features captivate and delight.</span>
             </span>
           </div>
-          <div class="feature-card2-feature-card feature-card2-root-class-name2">
+          <div class="feature-card2-feature-card">
             <img alt="image" src="public/first-aid-kit1-200h.png" class="feature-card2-image" />
             <h2 class="feature-card2-text"><span>Support</span></h2>
             <span class="feature-card2-text1">
@@ -270,7 +300,7 @@
                 reliable and dynamic website.</span>
             </span>
           </div>
-          <div class="feature-card3-feature-card feature-card3-root-class-name">
+          <div class="feature-card3-feature-card">
             <img alt="image" src="public/money-200h.png" class="feature-card3-image" />
             <h2 class="feature-card3-text"><span>Low Cost</span></h2>
             <span class="feature-card3-text1">
@@ -279,7 +309,7 @@
                 that fit your budget.</span>
             </span>
           </div>
-          <div class="feature-card4-feature-card feature-card4-root-class-name">
+          <div class="feature-card4-feature-card">
             <img alt="image" src="public/settings1-200h.png" class="feature-card4-image" />
             <h2 class="feature-card4-text"><span>Bespoke Designs</span></h2>
             <span class="feature-card4-text1">
@@ -290,7 +320,7 @@
           </div>
         </div>
 
-        <h1 class="home-text03"> <span>And Much More...</span> <br /> <span></span> </h1> 
+        <h1 class="home-text03"> <span>And Much More...</span> <br /> <span></span> </h1>
 
       </div>
       <section class="home-contact">
