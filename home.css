@@ -665,12 +665,12 @@
   object-fit: cover;
 }
 .home-container07 {
-  /*top: 55%;*/
-  /*left: 50%;*/
   width: 50%;
   height: 65%;
-  /*position: relative;*/
-  transform: translate(50%,50%);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   box-shadow: 5px 5px 10px 0px #545454;
   border-radius: var(--dl-radius-radius-radius75);
   backdrop-filter: saturate(200%) blur(30px);
