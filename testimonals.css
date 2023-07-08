@@ -337,14 +337,7 @@
   height: 100%;
   display: flex;
   justify-content: center;
-}
-.testimonals-intro{
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  padding-left: 15%;
-  padding-right: 15%;
-  margin-bottom: 100px;
+  margin-top: 140px;
 }
 .testimonals-container3 {
   width: 100%;
@@ -358,13 +351,30 @@
 .testimonals-text {
   color: #757575;
   text-align: center;
+  opacity: 0; /* Hide the element initially */
+  transform: translateX(-100%); /* Move the element outside the viewport */
+  animation: slide-in 0.5s forwards; /* Apply the animation */
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 .testimonals-text03 {
   color: rgb(131, 131, 131);
   font-size: 1rem;
   margin-top: var(--dl-space-space-unit);
   text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 50px;
+  opacity: 0; /* Hide the element initially */
+  transform: translateX(-100%); /* Move the element outside the viewport */
+  animation: slide-in 0.5s forwards; /* Apply the animation */
 }
 .testimonals-container4 {
   width: 100%;
@@ -377,7 +387,6 @@
 .testimonals-testimonial-card {
   display: flex;
   padding: 32px;
-  /*max-width: 1400px;*/
   background: #fff;
   box-shadow: 5px 5px 10px 0px rgba(18, 18, 18, 0.1);
   align-items: center;
@@ -388,6 +397,25 @@
   animation: testimonialAnimation 0.5s ease-in-out forwards;
   top: 20px; /* Initial position below the parent */
 }
+
+.testimonals-testimonial-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.211);
+  filter: blur(0);
+  transition: filter 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.testimonals-testimonial-card:hover::before {
+  filter: blur(1px);
+  opacity: 1;
+}
+
 @keyframes testimonialAnimation {
   0% {
     opacity: 0;
@@ -582,13 +610,6 @@
   }
 }
 @media(max-width: 991px) {
-  .testimonals-intro
-  {
-    margin-top: 200px;
-    margin-bottom: 0px;
-    padding-left: 10%;
-    padding-right: 10%;
-  }
   .testimonals-text04 {
     font-size: 15px;
   }

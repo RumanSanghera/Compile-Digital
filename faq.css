@@ -168,16 +168,26 @@
   text-align: left;
   font-size: 15px;
   transition: 0.4s;
+  flex-basis: 100%;
 }
 
-.accordion:after {
-  content: '\02795';
+.accordion.active .accordion-symbol:after {
+  content: "-";
+}
 
-  /* Unicode character for "plus" sign (+) */
-  font-size: 13px;
-  color: rgb(184, 184, 184);
+.accordion .accordion-symbol:after {
+  content: "+";
+  font-size: 30px;
+  color: #ffffff;
   float: right;
   margin-left: 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right, #7928ca, #ff0080);
 }
 
 .accordion:hover {
@@ -185,7 +195,36 @@
 }
 
 .accordion:active {
-  content: "\2796";
+  content: "-";
+}
+.faqContainer {
+  padding-top: 10%;
+  padding-left: 30px;
+  padding-right: 30px;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.accordion-wrapper {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.accordion-image {
+  width: 200px;
+  height: auto;
+  margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+  .accordion-image {
+    margin-left: 0;
+    margin-top: 20px;
+    align-self: center;
+  }
 }
 
 
