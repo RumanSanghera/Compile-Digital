@@ -213,8 +213,72 @@
           </div>
         </div>
       </header>
-      <h2 style="margin-bottom: 5%;">Frequently Asked Questions</h2>
+     
 
+
+      <div class="parent-section">
+        <h2 class="title-text">Frequently Asked Questions</h2>
+        <div class="inner-div">
+          <div class="left-div">
+           
+              <!-- Content for left div -->
+              <div class="accordion-items">
+                <button class="accordion">
+                  How long does it take to build a website?
+                  <span class="accordion-symbol"></span>
+                </button>
+                <div class="panel">
+                  <p class="FAQpara">The timeline for website development varies depending on the complexity and specific requirements of each project. However, we strive to deliver efficient and timely results. We will provide you with a clear estimate of the project timeline during our initial consultation.</p>
+                </div>
+                <button class="accordion">
+                  Can I update and manage the content on my website?
+                  <span class="accordion-symbol"></span>
+                </button>
+                <div class="panel">
+                  <p class="FAQpara">Absolutely! We design and develop websites using a user-friendly content management system (CMS), allowing you to easily update and manage your website's content without any coding knowledge.</p>
+                </div>
+                <button class="accordion">
+                  Will my website be mobile-friendly and responsive?
+                  <span class="accordion-symbol"></span>
+                </button>
+                <div class="panel">
+                  <p class="FAQpara">Yes! We ensure that all websites we design and develop are fully optimized to provide a seamless user experience across various devices, including smartphones, tablets, and desktops.</p>
+                </div>
+                <button class="accordion">
+                  Do you provide website hosting and domain registration?
+                  <span class="accordion-symbol"></span>
+                </button>
+                <div class="panel">
+                  <p class="FAQpara">While we primarily specialize in website design and development, we can assist you in choosing a reliable hosting provider and guide you through the domain registration process.</p>
+                </div>
+                <button class="accordion">
+                  Can you optimize my website for search engines (SEO)?
+                  <span class="accordion-symbol"></span>
+                </button>
+                <div class="panel">
+                  <p class="FAQpara">Yes! We follow SEO best practices during the website development process to ensure that your website is structured and optimized for search engines. We can also provide ongoing SEO services to help improve your website's visibility in search engine rankings.</p>
+                </div>
+                <button class="accordion">
+                  How do I get started with the website design process?
+                  <span class="accordion-symbol"></span>
+                </button>
+                <div class="lastpanel">
+                  <p class="FAQpara">Getting started is simple! Reach out to us through our contact page or by using the provided contact information. We will schedule a consultation to discuss your project in detail, including your goals, budget, and timeline. From there, we will work closely with you to bring your vision to life.</p>
+                </div>
+              </div>
+            
+          </div>
+          <div class="right-div">
+              <img src="public/faq.png" alt="FAQ" class="accordion-image">
+              <p>Cant Find The Answer Your After? Contact Us Using Our Online Form And We'll Get Back To You In 24 Hours</p>
+              <button class="primary-pink-button-button button ButtonSmall">Contact Us</button>
+            
+          </div>
+
+        </div>
+      </div>
+      
+      <!-- 
       <div class="faqContainer">
 
 
@@ -266,10 +330,12 @@
           <p class="FAQpara">Getting started is simple! Reach out to us through our contact page or by using the provided contact information. We will schedule a consultation to discuss your project in detail, including your goals, budget, and timeline. From there, we will work closely with you to bring your vision to life.</p>
         </div>
       </div>
+      <div class="image-containerFAQ">
       <img src="public/faq.png" alt="FAQ" class="accordion-image">
+      </div>
     </div>
 
-      
+      -->
 
       <footer class="footer-gray-footer footer-gray-root-class-name">
         <div class="footer-gray-divider"></div>
@@ -329,30 +395,33 @@
   <script src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
   <script data-section-id="header" src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
   <script>
-    var acc = document.getElementsByClassName("accordion");
-    var i;
+   var acc = document.getElementsByClassName("accordion");
+var i;
 
-    for (i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-
-        var panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-          panel.style.maxHeight = null;
-        } else {
-          panel.style.maxHeight = panel.scrollHeight + "px";
-        }
-
-        var isOpen = this.classList.contains("active");
-        var symbol = this.querySelector(".accordion-symbol");
-
-        if (isOpen) {
-          symbol.textContent = "-";
-        } else {
-          symbol.textContent = "+";
-        }
-      });
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+      this.style.backgroundColor = "rgb(255, 255, 255)";
+      this.style.color = "#000000";
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+      this.style.backgroundColor = "#7928ca";
+      this.style.color = "#ffffff";
     }
+
+    var isOpen = this.classList.contains("active");
+    var symbol = this.querySelector(".accordion-symbol");
+
+    if (isOpen) {
+      symbol.textContent = "-";
+    } else {
+      symbol.textContent = "+";
+    }
+  });
+}
   </script>
 </body>
 
