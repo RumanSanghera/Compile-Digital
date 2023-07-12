@@ -354,6 +354,9 @@
   opacity: 0; /* Hide the element initially */
   transform: translateX(-100%); /* Move the element outside the viewport */
   animation: slide-in 0.5s forwards; /* Apply the animation */
+  font-weight: 700;
+  font-size: 3.75rem;
+  margin: 0px 0px 20px 0px;
 }
 
 @keyframes slide-in {
@@ -618,6 +621,8 @@
   }
   .testimonals-text {
     text-align: center;
+    font-size: 2rem;
+    margin: 60px 0px 20px 0px;
   }
   .testimonals-text03 {
     text-align: center;

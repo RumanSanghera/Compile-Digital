@@ -217,7 +217,7 @@
   width: 60%;
 }
 .parent-section {
-  margin: 0 10%;
+  margin: 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -227,25 +227,51 @@
 .inner-div {
   display: flex;
   height: 100%;
+  transform: translateY(-100%);
+  animation: slideInTop 1s ease-in-out forwards;
+}
+
+@keyframes slideInTop {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 .title-text{
   text-align: center;
   font-weight: 700;
-  width: 867px;
   font-size: 3.75rem;
-  margin: 60px auto 0;
+  margin: 100px 0px 20px 0px;
+  color: #757575;
+  opacity: 0; /* Hide the element initially */
+  transform: translateX(-100%); /* Move the element outside the viewport */
+  animation: slide-in 0.5s forwards; /* Apply the animation */
+  animation-delay: 1s; /* Add a delay to start the animation after 1 second */
+
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.faq-text02{
+  margin: 20px 30px 30px 30px;
+
 }
 
 .left-div,
 .right-div {
   flex-basis: 50%;
   height: 100%;
-}
-
-
-.left-div {
-  /* background-color: #f1f1f1;*/
 }
 
 .right-div {
@@ -530,9 +556,23 @@
   .faqContainer {
     padding-top: 30%;
   }
+
 }
 
 @media(max-width: 767px) {
+  
+    .left-div{
+      flex-basis: 100%;
+    }
+    .right-div {
+    
+      display: none;
+    }
+    
+.title-text{
+  font-size: 2rem;
+  margin: 130px 0px 50px 0px;
+}
   .footer-gray-container1 {
     flex-direction: column;
   }
