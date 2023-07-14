@@ -339,7 +339,7 @@
   /*border-radius: var(--dl-radius-radius-radius40);*/
   padding-right: 10px;
   padding-bottom: 24px;
-  justify-content: center;
+  justify-content: space-between;
   background-color: hsla(0,0%,100%,.1);
   backdrop-filter: blur(8px);
 }
@@ -423,8 +423,8 @@
   display: none;
 }
 .home-icon06 {
-  width: 16px;
-  height: 16px;
+  width: 50px;
+  height: 50px;
   display: none;
 }
 .home-mobile-menu {
@@ -440,7 +440,7 @@
   justify-content: space-between;
   
   box-shadow: 5px 5px 5px 0px rgba(19, 19, 19, 0.55);
-  border-radius: var(--dl-radius-radius-radius40);
+  /*border-radius: var(--dl-radius-radius-radius40);*/
   background-color: #FFFFFF;
 }
 .home-nav2 {
@@ -464,8 +464,8 @@
   justify-content: center;
 }
 .home-icon08 {
-  width: 16px;
-  height: 16px;
+  width: 50px;
+  height: 50px;
 }
 .home-icon10 {
   width: 16px;
