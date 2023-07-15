@@ -447,6 +447,7 @@
   background: linear-gradient(310deg, rgb(121, 40, 202), rgb(255, 0, 128));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-weight: 750 !important;
 
 }
 .home-button {
