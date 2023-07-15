@@ -178,7 +178,7 @@
   min-height: 100vh;
   align-items: flex-start;
   flex-direction: column;
-  justify-content: flex-end;
+  
 }
 .testimonals-header {
   top: 38px;
@@ -339,6 +339,7 @@
   justify-content: center;
   margin-top: 140px;
 }
+
 .testimonals-container3 {
   width: 100%;
   display: flex;
@@ -430,6 +431,7 @@
 .testimonals-testimonial-card:hover::before {
   filter: blur(1px);
   opacity: 1;
+  cursor: pointer;
 }
 
 @keyframes testimonialAnimation {
@@ -456,7 +458,7 @@
 }
 .hiddenDiv{
   display: none;
-  padding: 20px;
+
   box-shadow: 5px 5px 10px 0px rgba(18, 18, 18, 0.1);
   align-items: center;
   flex-direction: column;
@@ -465,7 +467,7 @@
   background-color: #f2f2f2;
   top: 50%;
   left: 50%;
-  padding-top: 5%;
+
   transform: translate(-50%, -50%);
   width: 90%;
   padding-left: 15%;
@@ -473,7 +475,7 @@
   height: 90%;
   justify-content: center;
   backdrop-filter: blur(5px);
-
+  overflow: hidden; /* Added this line to hide overflowing content */
 
 }
 
@@ -504,6 +506,8 @@
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
+  max-width: 100%; /* Added this line to ensure the text does not exceed container width */
+
 }
 .testimonals-text05 {
   font-size: 1.5rem;
@@ -517,8 +521,10 @@
   text-transform: uppercase;
 }
 .testimonals-image2 {
-  width: 96px;
-  height: 96px;
+  max-width: 96px; /* Changed this line to set maximum width */
+  max-height: 96px; /* Changed this line to set maximum height */
+  width: 100%; /* Added this line to ensure image fills the container width */
+  height: auto; /* Added this line to allow automatic height adjustment */
   object-fit: cover;
   border-radius: var(--dl-radius-radius-round);
 }
@@ -548,8 +554,8 @@
   margin-bottom: 48px;
 }
 .testimonals-text09 {
-  font-size: 1.5rem;
-  font-weight: 300;
+  font-size: 4.5rem;
+  font-weight: 400;
   margin-bottom: var(--dl-space-space-halfunit);
 }
 .testimonals-text11 {
@@ -569,10 +575,20 @@
 .testimonals-previewIMG {
   max-width: 100%;
   max-height: 100%;
+  width: auto; /* Changed this line to allow automatic width adjustment */
+  height: auto; /* Changed this line to allow automatic height adjustment */
   display: block;
   margin: 0 auto;
   margin-bottom: 16px;
-    
+}
+.testimonals-fullscreenIMG {
+  max-width: 60%;
+  max-height: 100%;
+  width: auto; /* Changed this line to allow automatic width adjustment */
+  height: auto; /* Changed this line to allow automatic height adjustment */
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 16px; 
 }
 .testimonals-testimonial-card2 {
   display: flex;
@@ -622,6 +638,13 @@
   }
 }
 @media(max-width: 991px) {
+  .testimonals-fullscreenIMG {
+    max-width: 100%;
+  }
+  .testimonals-text09{
+    font-size: 3rem;
+    font-weight: 300;
+  }
   .testimonals-text04 {
     font-size: 15px;
   }
@@ -652,6 +675,10 @@
   
 }
 @media(max-width: 767px) {
+  .testimonals-text09{
+    font-size: 2rem;
+    font-weight: 300;
+  }
   .hiddenDiv{
     padding-left: 5%;
     padding-right: 5%;
@@ -708,6 +735,7 @@
   .testimonals-text04 {
     font-size: 11px;
     line-height: 1.5;
+    margin-bottom: 32px;
   }
   .testimonals-testimonial {
     /* padding-top: 40%;*/
@@ -735,9 +763,6 @@
   }
   .testimonals-icon16 {
     margin-bottom: var(--dl-space-space-unit);
-  }
-  .testimonals-text04 {
-    margin-bottom: 32px;
   }
   .testimonals-text05 {
     margin-bottom: var(--dl-space-space-halfunit);

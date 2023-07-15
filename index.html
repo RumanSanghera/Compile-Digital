@@ -167,7 +167,6 @@
     <div class="home-container">
 
       <header data-role="Header" class="home-header">
-       
         <div class="home-container01">
           <div data-role="BurgerMenu" class="home-burger-menu">
             <svg viewBox="0 0 1024 1024" class="home-icon06">
@@ -179,22 +178,37 @@
         </div>
         <div class="home-nav">
           <nav class="home-nav1">
-            <a href="#home" class="home-link button">Home</a>
-            <a href="testimonals.html" class="home-navlink button">
+            <a href="#home" class="home-button home-active button">Home</a>
+            <a href="testimonals.html" class="home-button button">
               Testimonials
             </a>
-            <a href="faq.html" class="home-navlink1 button">FAQ</a>
-            <a href="#contact" class="home-button button">Contact Us</a>
+            <a href="faq.html" class="home-button button">FAQ</a>
+            <a href="#" onclick="scrollToDiv('homecontact')" class="home-button button">Contact Us</a>
           </nav>
         </div>
-        <a href="#home">
-          <img alt="image" src="public/compilelogo-200h.png" class="home-image" />
-        </a>
+        <img alt="image" src="public/compilelogo-200h.png" class="home-image" id="image-link"/>
+    
+        
+
+        <script>
+          function scrollToDiv(divId) {
+            const targetDiv = document.getElementById(divId);
+            const scrollPosition = targetDiv.offsetTop - (window.innerHeight / 2) + (targetDiv.offsetHeight / 2);
+            window.scrollTo({
+              top: scrollPosition,
+              behavior: 'smooth'
+            });
+          }
+
+          const imageLink = document.getElementById('image-link');
+          imageLink.addEventListener('click', function() {
+            window.location.href = '#home'; // Replace with the desired URL or action
+          });
+        </script>
 
         <div data-role="MobileMenu" class="home-mobile-menu">
           <div class="home-nav2">
             <div class="home-container02">
-              <img alt="image" src="public/compilelogo-200h.png" class="home-image" />
               <div data-role="CloseMobileMenu" class="home-close-mobile-menu">
                 <svg viewBox="0 0 1024 1024" class="home-icon08">
                   <path
@@ -202,12 +216,14 @@
                   </path>
                 </svg>
               </div>
+              <img alt="image" src="public/compilelogo-200h.png" class="home-image" />
+
             </div>
-            <div class="home-nav2">
-              <a href="#home" class="home-navlink1 button">Home</a>
+            <div class="home-nav3">
+              <a href="#home" class="home-navlink1 home-active button">Home</a>
               <a href="testimonals.html" class="home-navlink1 button">Testimonials</a>
               <a href="faq.html" class="home-navlink1 button">FAQ</a>
-              <a href="#contact" class="home-navlink1 button">Contact Us</a>
+              <a href="#" onclick="scrollToDiv('homecontact')" class="home-navlink1 button">Contact Us</a>
             </div>
           </div>
         </div>
@@ -253,34 +269,34 @@
           );
         }
 
-        function handleScroll2(){
+        function handleScroll2() {
           const heroElement = document.getElementById('homecontact');
           if (isElementInViewport(heroElement)) {
             heroElement.classList.add('fade-in');
             window.removeEventListener('scroll', handleScroll2); // Remove the event listener after animation
+          }
         }
-      }
-      
+
         function handleScroll() {
 
-            const featuresElement = document.getElementById('feature-text');
-            
-            if (isElementInViewport(featuresElement)) {
-              featuresElement.classList.add('fade-in');
-              const cards = document.querySelectorAll('.home-features .feature-card1-feature-card, .home-features .feature-card2-feature-card, .home-features .feature-card3-feature-card, .home-features .feature-card4-feature-card');
-              let delay = 0.2; // Initial delay for the first card
-              for (let i = 0; i < cards.length; i++) {
-                setTimeout(function (card) {
-                  card.classList.add('fade-in');
-                }, delay * 1000, cards[i]);
-                delay += 0.2; // Increment the delay for subsequent cards
-              }
-      
-              window.removeEventListener('scroll', handleScroll); // Remove the event listener after animation
+          const featuresElement = document.getElementById('feature-text');
+
+          if (isElementInViewport(featuresElement)) {
+            featuresElement.classList.add('fade-in');
+            const cards = document.querySelectorAll('.home-features .feature-card1-feature-card, .home-features .feature-card2-feature-card, .home-features .feature-card3-feature-card, .home-features .feature-card4-feature-card');
+            let delay = 0.2; // Initial delay for the first card
+            for (let i = 0; i < cards.length; i++) {
+              setTimeout(function (card) {
+                card.classList.add('fade-in');
+              }, delay * 1000, cards[i]);
+              delay += 0.2; // Increment the delay for subsequent cards
             }
-          
+
+            window.removeEventListener('scroll', handleScroll); // Remove the event listener after animation
+          }
+
         }
-      
+
         window.addEventListener('scroll', handleScroll);
         window.addEventListener('scroll', handleScroll2);
 
@@ -288,7 +304,7 @@
       <div id="features" class="home-features">
 
         <div id="feature-text" class="featureText">
-          <h1 class="home-text03"> What Can We Offer ?  </h1> 
+          <h1 class="home-text03"> What Can We Offer ? </h1>
           <p class="home-text06">Our website building business provides a comprehensive range of services to
             create tailored and professional online presences. Our skilled team collaborates closely with
             clients, understanding their unique needs and goals. From custom design to responsive development,
@@ -334,10 +350,8 @@
             </span>
           </div>
         </div>
-
-        <h1 class="home-text03"> <span>And Much More...</span> <br /> <span></span> </h1>
-
       </div>
+
       <section class="home-contact" id="homecontact">
         <img alt="image" src="public/waves-white.svg" class="home-image3" />
         <img alt="image" src="public/top.svg" class="home-top-wave-image" />
@@ -365,11 +379,12 @@
               <textarea class="textareaC" name="message" required></textarea> <span class="label2">Message</span>
             </div>
             <button type="submit" onclick="myFunction()" class="home-button1 button"> <span> <span
-                  class="buttonSmall home-text11">SEND</span> <br /> </span>
+                  class="buttonSmall home-text11">Submit</span> <br /> </span>
             </button>
           </form>
         </div>
       </section>
+
       <footer class="footer-gray-footer footer-gray-root-class-name1">
         <div class="footer-gray-divider"></div>
         <div class="footer-gray-container">
@@ -425,8 +440,8 @@
       </footer>
     </div>
   </div>
-  <script src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
-  <script data-section-id="header" src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
+
+  <script data-section-id="header" src="./scripts/nav.js"></script>
 </body>
 
 </html>

@@ -41,10 +41,7 @@
   --dl-space-space-unitandahalfunit: 1.5rem;
   --dl-space-space-triplequarterunit: 0.75rem;
 }
-.teleport-show {
-  display: flex !important;
-  transform: none !important;
-}
+
 .button {
   color: #000000;
   display: inline-block;
