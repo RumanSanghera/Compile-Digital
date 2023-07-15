@@ -319,7 +319,7 @@
   flex-direction: column;
 }
 .home-header {
-  top: -100%; /* Add this line to set initial position */
+  /* top: -100%; Add this line to set initial position */
   animation-duration: 1s;
   animation-fill-mode: forwards;
   animation-name: fadeInTop;
@@ -333,9 +333,9 @@
   box-shadow: 0px 1px 10px 0px rgb(73 70 70 / 55%);
   align-items: center;
   padding-top: 40px;
+  padding-bottom: 40px;
   padding-left: 10px;
   padding-right: 10px;
-  padding-bottom: 40px;
   justify-content: center;
   background-color: hsla(0,0%,100%,.1);
   backdrop-filter: blur(8px);
@@ -354,12 +354,10 @@
 
 @keyframes slideDown {
   0% {
-    top: 84px; /* Adjust the value as needed */
     height: 0;
   }
   100% {
-    top: 0;
-    height: 50vh;
+    height: 80vh;
   }
 }
 
@@ -369,7 +367,7 @@
   width: 100%;
   height: 50vh;
   display: none;
-  padding: 40px 32px 0px 32px;
+  padding: 11px 32px 0px 32px;
   margin-top: 0px;
 
   z-index: 100;
@@ -384,10 +382,10 @@
 .home-mobile-menu.open {
   display: flex;
   animation-duration: 0.5s;
-  animation-name: slideDown;
+  animation-name: slideDown2;
 }
 
-@keyframes slideDown {
+@keyframes slideDown2 {
   0% {
     height: 0;
   }
@@ -449,6 +447,7 @@
   background: linear-gradient(310deg, rgb(121, 40, 202), rgb(255, 0, 128));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
 }
 .home-button {
   font-style: normal;
@@ -503,7 +502,7 @@
     animation-name: gradientFadeInAnimation;
     animation-duration: 2s;
     animation-fill-mode: forwards;
-    animation-delay: 60ms;
+    animation-delay: 250ms;
   }
   
   @keyframes gradientFadeInAnimation {
@@ -1000,7 +999,11 @@ input::placeholder {
   .home-header {
     padding-left: 32px;
     padding-right: 32px;
+    padding-top: 11px;
+    padding-bottom: 11px;
     justify-content: space-between;
+    background-color: #FFFFFF;
+    backdrop-filter: blur(0px);
   }
   .home-image
   {
