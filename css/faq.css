@@ -203,6 +203,7 @@
   background-color: #ccc;
 }
 
+
 .accordion:active {
   content: "-";
 }

@@ -392,19 +392,14 @@
           panel.style.maxHeight = null;
           this.style.backgroundImage = "linear-gradient(310deg, rgb(255, 255, 255), rgb(255, 255, 255))"
           this.style.color = "#000000";
+          var symbol = this.querySelector(".accordion-symbol::after");
+          symbol.style.content = "'+'";
         } else {
           panel.style.maxHeight = panel.scrollHeight + "px";
           this.style.backgroundImage = "linear-gradient(310deg, rgb(121, 40, 202), rgb(255, 0, 128))";
           this.style.color = "#ffffff";
-        }
-  
-        var isOpen = this.classList.contains("active");
-        var symbol = this.querySelector(".accordion-symbol");
-  
-        if (isOpen) {
-          symbol.textContent = "-";
-        } else {
-          symbol.textContent = "+";
+          var symbol = this.querySelector(".accordion-symbol::after");
+          symbol.style.content = "'-'";
         }
       });
     }
