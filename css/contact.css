@@ -30,7 +30,7 @@ html {
 }
 .container-contact100 {
     width: 100%;
-    min-height: 100vh;
+    min-height: 100%;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -40,11 +40,13 @@ html {
     justify-content: center;
     align-items: center;
     padding: 15px;
+    /*
     background: #a64bf4;
     background: -webkit-linear-gradient(230deg, #7928ca,#ff0080);
     background: -o-linear-gradient(230deg, #7928ca,#ff0080);
     background: -moz-linear-gradient(230deg, #7928ca,#ff0080);
     background: linear-gradient(230deg, #7928ca,#ff0080);
+    */
 }
 
 .wrap-contact100 {
@@ -118,7 +120,9 @@ html {
     -o-transition: all .4s;
     -moz-transition: all .4s;
     transition: all .4s;
-    background: #7f7f7f
+    /*background: #7f7f7f*/
+    background-image: linear-gradient(310deg, #7928ca, #ff0080);
+
 }
 
 input.input100 {
@@ -166,10 +170,10 @@ textarea.input100 {
     width: 300%;
     height: 100%;
     background: #a64bf4;
-    background: -webkit-linear-gradient(left, #00dbde, #fc00ff, #00dbde, #fc00ff);
-    background: -o-linear-gradient(left, #00dbde, #fc00ff, #00dbde, #fc00ff);
-    background: -moz-linear-gradient(left, #00dbde, #fc00ff, #00dbde, #fc00ff);
-    background: linear-gradient(left, #00dbde, #fc00ff, #00dbde, #fc00ff);
+    background: -webkit-linear-gradient(left, #ff0080, #7928ca, #ff0080, #7928ca);
+    background: -o-linear-gradient(left, #ff0080, #7928ca, #ff0080, #7928ca);
+    background: -moz-linear-gradient(left, #ff0080, #7928ca, #ff0080, #7928ca);
+    background: linear-gradient(left, #ff0080, #7928ca, #ff0080, #7928ca);
     top: 0;
     left: -100%;
     -webkit-transition: all .4s;

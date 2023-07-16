@@ -74,7 +74,7 @@
 .footer-gray-icon {
   fill: var(--dl-color-secondary-400);
   width: 24px;
-  height: 25px;
+  height: 24px;
   margin-right: var(--dl-space-space-unit);
 }
 
@@ -87,14 +87,14 @@
 
 .footer-gray-icon4 {
   fill: var(--dl-color-secondary-400);
-  width: 29px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   margin-right: var(--dl-space-space-unit);
 }
 
 .footer-gray-icon6 {
   fill: var(--dl-color-secondary-400);
-  width: 24px;
+  width: 21px;
   height: 24px;
 }
 

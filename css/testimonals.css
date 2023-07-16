@@ -67,7 +67,7 @@
 .footer-gray-icon {
   fill: var(--dl-color-secondary-400);
   width: 24px;
-  height: 25px;
+  height: 24px;
   margin-right: var(--dl-space-space-unit);
 }
 .footer-gray-icon2 {
@@ -78,13 +78,13 @@
 }
 .footer-gray-icon4 {
   fill: var(--dl-color-secondary-400);
-  width: 29px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   margin-right: var(--dl-space-space-unit);
 }
 .footer-gray-icon6 {
   fill: var(--dl-color-secondary-400);
-  width: 24px;
+  width: 21px;
   height: 24px;
 }
 .footer-gray-container4 {
@@ -507,6 +507,7 @@
   margin-top: 20px;
   margin-bottom: 20px;
   max-width: 100%; /* Added this line to ensure the text does not exceed container width */
+  font-size: 20px;
 
 }
 .testimonals-text05 {
