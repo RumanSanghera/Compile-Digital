@@ -405,7 +405,8 @@
   display: flex;
   padding: 32px;
   background: #fff;
-  box-shadow: 5px 5px 10px 0px rgba(18, 18, 18, 0.1);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);  
+  border-radius: 5px;
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
@@ -418,12 +419,12 @@
 .testimonals-testimonial-card::before {
   content: '';
   position: absolute;
+  border-radius: 5px;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.211);
-  filter: blur(0);
   transition: filter 0.3s ease-in-out;
   opacity: 0;
 }
@@ -458,8 +459,7 @@
 }
 .hiddenDiv{
   display: none;
-
-  box-shadow: 5px 5px 10px 0px rgba(18, 18, 18, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
   align-items: center;
   flex-direction: column;
   z-index: 1002;
@@ -467,7 +467,6 @@
   background-color: #f2f2f2;
   top: 50%;
   left: 50%;
-
   transform: translate(-50%, -50%);
   width: 90%;
   padding-left: 15%;
@@ -476,8 +475,19 @@
   justify-content: center;
   backdrop-filter: blur(5px);
   overflow: hidden; /* Added this line to hide overflowing content */
-
+  
+  animation: fadeIn 0.5s ease-in-out;
 }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 
 .overlay {
   position: fixed;
