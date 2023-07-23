@@ -1062,6 +1062,11 @@ input::placeholder {
   .home-text07{
     font-size: 2.5rem;
   }
+  .feature-card1-feature-card,
+.feature-card2-feature-card,
+.feature-card3-feature-card,
+.feature-card4-feature-card {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);}
 
 }
 @media(max-width: 479px) {
