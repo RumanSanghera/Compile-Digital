@@ -163,258 +163,291 @@
 </head>
 
 <body>
-  
-    <link href="./css/home.css" rel="stylesheet" />
-    <div class="home-container">
 
-      <header data-role="Header" class="home-header">
-        <div class="home-container01">
-          <div data-role="BurgerMenu" class="home-burger-menu">
-            <svg viewBox="0 0 1024 1024" class="home-icon06">
-              <path
-                d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z">
-              </path>
-            </svg>
-          </div>
+  <link href="./css/home.css" rel="stylesheet" />
+  <div class="home-container">
+
+    <header data-role="Header" class="home-header">
+      <div class="home-container01">
+        <div data-role="BurgerMenu" class="home-burger-menu">
+          <svg viewBox="0 0 1024 1024" class="home-icon06">
+            <path
+              d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z">
+            </path>
+          </svg>
         </div>
-        <div class="home-nav">
-          <nav class="home-nav1">
-            <a href="#home" class="home-button home-active button">Home</a>
-            <a href="testimonals.html" class="home-button button">
-              Testimonials
-            </a>
-            <a href="faq.html" class="home-button button">FAQ</a>
-            <a href="#" onclick="scrollToDiv('homecontact')" class="home-button button">Contact Us</a>
-          </nav>
-        </div>
-        <img alt="image" src="public/compilelogo-200h.png" class="home-image" id="image-link" />
+      </div>
+      <div class="home-nav">
+        <nav class="home-nav1">
+          <a href="#home" class="home-button home-active button">Home</a>
+          <a href="testimonals.html" class="home-button button">
+            Testimonials
+          </a>
+          <a href="faq.html" class="home-button button">FAQ</a>
+          <a href="#" onclick="scrollToDiv('homecontact')" class="home-button button">Contact Us</a>
+        </nav>
+      </div>
+      <img alt="image" src="public/compilelogo-200h.png" class="home-image" id="image-link" />
 
 
 
-        <script>
-          function scrollToDiv(divId) {
-            const targetDiv = document.getElementById(divId);
-            const scrollPosition = targetDiv.offsetTop - (window.innerHeight / 2) + (targetDiv.offsetHeight / 2);
-            window.scrollTo({
-              top: scrollPosition,
-              behavior: 'smooth'
-            });
+      <script>
+        function scrollToDiv(divId) {
+          const targetDiv = document.getElementById(divId);
+          const scrollPosition = targetDiv.offsetTop - (window.innerHeight / 2) + (targetDiv.offsetHeight / 2);
+          window.scrollTo({
+            top: scrollPosition,
+            behavior: 'smooth'
+          });
+        }
+
+        const imageLink = document.getElementById('image-link');
+        imageLink.addEventListener('click', function () {
+          window.location.href = '#home'; // Replace with the desired URL or action
+        });
+
+        function isElementInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+          rect.top >= -50 &&
+          rect.top <= (window.innerHeight || document.documentElement.clientHeight)
+        );
+      }
+
+      function handleScroll2() {
+        const heroElement = document.getElementById('homecontact');
+        if (isElementInViewport(heroElement)) {
+          heroElement.classList.add('fade-in');
+          window.removeEventListener('scroll', handleScroll2); // Remove the event listener after animation
+        }
+      }
+
+      function handleScroll() {
+
+        const featuresElement = document.getElementById('feature-text');
+
+        if (isElementInViewport(featuresElement)) {
+          featuresElement.classList.add('fade-in');
+          const cards = document.querySelectorAll('.home-features .feature-card1-feature-card, .home-features .feature-card2-feature-card, .home-features .feature-card3-feature-card, .home-features .feature-card4-feature-card');
+          let delay = 0.2; // Initial delay for the first card
+          for (let i = 0; i < cards.length; i++) {
+            setTimeout(function (card) {
+              card.classList.add('fade-in');
+            }, delay * 1000, cards[i]);
+            delay += 0.2; // Increment the delay for subsequent cards
           }
 
-          const imageLink = document.getElementById('image-link');
-          imageLink.addEventListener('click', function () {
-            window.location.href = '#home'; // Replace with the desired URL or action
-          });
-        </script>
+          window.removeEventListener('scroll', handleScroll); // Remove the event listener after animation
+        }
 
-        <div data-role="MobileMenu" class="home-mobile-menu">
-          <div class="home-nav2">
-            <div class="home-container02">
-              <div data-role="CloseMobileMenu" class="home-close-mobile-menu">
-                <svg viewBox="0 0 1024 1024" class="home-icon08">
-                  <path
-                    d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z">
-                  </path>
-                </svg>
-              </div>
-              <img alt="image" src="public/compilelogo-200h.png" class="home-image" />
+      }
 
+      window.addEventListener('scroll', handleScroll);
+      window.addEventListener('scroll', handleScroll2);
+      </script>
+      
+
+      <div data-role="MobileMenu" class="home-mobile-menu">
+        <div class="home-nav2">
+          <div class="home-container02">
+            <div data-role="CloseMobileMenu" class="home-close-mobile-menu">
+              <svg viewBox="0 0 1024 1024" class="home-icon08">
+                <path d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z">
+                </path>
+              </svg>
             </div>
-            <div class="home-nav3">
-              <a href="#home" class="home-navlink1 home-active button">Home</a>
-              <a href="testimonals.html" class="home-navlink1 button">Testimonials</a>
-              <a href="faq.html" class="home-navlink1 button">FAQ</a>
-              <a href="#" onclick="scrollToDiv('homecontact')" class="home-navlink1 button">Contact Us</a>
-            </div>
+            <img alt="image" src="public/compilelogo-200h.png" class="home-image" />
+
+          </div>
+          <div class="home-nav3">
+            <a href="#home" class="home-navlink1 home-active button">Home</a>
+            <a href="testimonals.html" class="home-navlink1 button">Testimonials</a>
+            <a href="faq.html" class="home-navlink1 button">FAQ</a>
+            <a href="#" onclick="scrollToDiv('homecontact')" class="home-navlink1 button">Contact Us</a>
           </div>
         </div>
-      </header>
+      </div>
+    </header>
 
-      <div class="home-hero">
-        <div id="home" class="home-container03">
-          <div class="home-card">
-            <h1 class="home-text">Compile Digital</h1>
-            <h1 class="home-text01 HeadingOne">Web Design Agency - UK Based</h1>
-            <span class="home-text02">
-              Unlock Your Digital Potential with Bespoke Website Designs Tailored to Perfection
-            </span>
-            <div class="home-container04">
-              <div class="home-container05">
-                <a href="#contact" class="home-link1">
-                  <div class="primary-pink-button-container">
-                    <button class="primary-pink-button-button button ButtonSmall">
-                      <span>contact us</span>
-                    </button>
-                  </div>
-                </a>
-              </div>
-              <a href="#features" class="home-link2">
-                <div class="outline-gray-button-container">
-                  <button class="outline-gray-button-button button ButtonSmall">
-                    <span>read more</span>
+    <div class="home-hero">
+      <div id="home" class="home-container03">
+        <div class="home-card">
+          <h1 class="home-text">Compile Digital</h1>
+          <h1 class="home-text01 HeadingOne">Web Design Agency - UK Based</h1>
+          <span class="home-text02">
+            Unlock Your Digital Potential with Bespoke Website Designs Tailored to Perfection
+          </span>
+          <div class="home-container04">
+            <div class="home-container05">
+              <a href="#contact" class="home-link1">
+                <div class="primary-pink-button-container">
+                  <button class="primary-pink-button-button button ButtonSmall">
+                    <span>contact us</span>
                   </button>
                 </div>
               </a>
             </div>
+            <a href="#features" class="home-link2">
+              <div class="outline-gray-button-container">
+                <button class="outline-gray-button-button button ButtonSmall">
+                  <span>read more</span>
+                </button>
+              </div>
+            </a>
           </div>
         </div>
       </div>
-      <img alt="image" src="public/back.jpg" class="home-image2" />
+    </div>
+    <img alt="image" src="public/back.jpg" class="home-image2" />
 
-      <script>
-        function isElementInViewport(element) {
-          const rect = element.getBoundingClientRect();
-          return (
-            rect.top >= -50 &&
-            rect.top <= (window.innerHeight || document.documentElement.clientHeight)
-          );
-        }
 
-        function handleScroll2() {
-          const heroElement = document.getElementById('homecontact');
-          if (isElementInViewport(heroElement)) {
-            heroElement.classList.add('fade-in');
-            window.removeEventListener('scroll', handleScroll2); // Remove the event listener after animation
-          }
-        }
+    <div class="home-hero2">
+      <div id="home" class="home-container07">
 
-        function handleScroll() {
 
-          const featuresElement = document.getElementById('feature-text');
-
-          if (isElementInViewport(featuresElement)) {
-            featuresElement.classList.add('fade-in');
-            const cards = document.querySelectorAll('.home-features .feature-card1-feature-card, .home-features .feature-card2-feature-card, .home-features .feature-card3-feature-card, .home-features .feature-card4-feature-card');
-            let delay = 0.2; // Initial delay for the first card
-            for (let i = 0; i < cards.length; i++) {
-              setTimeout(function (card) {
-                card.classList.add('fade-in');
-              }, delay * 1000, cards[i]);
-              delay += 0.2; // Increment the delay for subsequent cards
-            }
-
-            window.removeEventListener('scroll', handleScroll); // Remove the event listener after animation
-          }
-
-        }
-
-        window.addEventListener('scroll', handleScroll);
-        window.addEventListener('scroll', handleScroll2);
-
-      </script>
-      <div id="features" class="home-features">
-
-        <div id="feature-text" class="featureText">
-          <h1 class="home-text03"> What Can We Offer ? </h1>
-          <p class="home-text06">Our website building business provides a comprehensive range of services to
-            create tailored and professional online presences. Our skilled team collaborates closely with
-            clients, understanding their unique needs and goals. From custom design to responsive development,
-            SEO, and social media integration, we deliver visually stunning, user-friendly websites that drive
-            results.</p>
+        <div class="home-project-text">
+          <h1 class="home-text03"> Our Projects </h1>
+          <p class="home-text06">Here are some of our projects we have worked on...</p>
         </div>
 
-        <div class="home-container06">
-          <div class="feature-card1-feature-card">
-            <img alt="image" src="public/features1-200h.png" class="feature-card1-image" />
-            <h2 class="feature-card1-text"><span>E-Commerce</span></h2>
-            <span class="feature-card1-text1">
-              <span>Elevate your website with cutting-edge features. Our team crafts stunning visuals,
-                seamless navigation, and enhanced functionality. From interactivity to multimedia
-                integration, our comprehensive features captivate and delight.</span>
-            </span>
+
+
+        <div class="projectDiv">
+          <div class="project-container">
+            <a href="https://flexntone.co.uk/">
+              <img alt="profile" src="public/flexntone.PNG" class="project-IMG" />
+            </a>
+            <span class="">Flex 'N' Tone</span>
+            <button href="" class="primary-pink-button-button button ButtonSmall">
+              <span>Read More</span>
+            </button>
           </div>
-          <div class="feature-card2-feature-card">
-            <img alt="image" src="public/first-aid-kit1-200h.png" class="feature-card2-image" />
-            <h2 class="feature-card2-text"><span>Support</span></h2>
-            <span class="feature-card2-text1">
-              <span>We have your back every step of the way. Our dedicated support team offers prompt
-                assistance and resolves queries. From technical guidance to content updates, we ensure a
-                reliable and dynamic website.</span>
-            </span>
-          </div>
-          <div class="feature-card3-feature-card">
-            <img alt="image" src="public/money-200h.png" class="feature-card3-image" />
-            <h2 class="feature-card3-text"><span>Low Cost</span></h2>
-            <span class="feature-card3-text1">
-              <span>Exceptional web design without the hefty price tag. Our affordability delivers
-                cost-effective solutions without compromising quality. Responsive web design services
-                that fit your budget.</span>
-            </span>
-          </div>
-          <div class="feature-card4-feature-card">
-            <img alt="image" src="public/settings1-200h.png" class="feature-card4-image" />
-            <h2 class="feature-card4-text"><span>Bespoke Designs</span></h2>
-            <span class="feature-card4-text1">
-              <span>Reflect your vision with a unique website. Our designers
-                understand your brand, objectives, and audience. Tailored elements, from colors to
-                typography, create an authentic representation of your brand's personality.</span>
-            </span>
+          <div class="project-container">
+            <a href="https://owenmasseyfilm.com/">
+              <img alt="profile" src="public/owenmasseyfilms.PNG" class="project-IMG" />
+            </a>
+            <span class="">Owen Massey Film</span>
+            <button href="" class="primary-pink-button-button button ButtonSmall">
+              <span>Read More</span>
+            </button>
           </div>
         </div>
       </div>
-      
-      <section class="home-contact" id="homecontact">
-        <img alt="image" src="public/waves-white.svg" class="home-image3" />
-        <img alt="image" src="public/top.svg" class="home-top-wave-image" />
-        <div class="container-contact100" id="homecontact">
-          <div class="wrap-contact100">
-            <form action="https://formsubmit.co/d6e3b8a19e64bf97194f61af4fa12f48" method="POST"
-              class="contact100-form validate-form">
-              <span class="contact100-form-title">
-                Get In Touch!
-              </span>
-              <div class="wrap-input100 validate-input" data-validate="Name is required">
-                <span class="label-input100">Your Name</span>
-                <input class="input100" required type="text" name="name" placeholder="Enter your name">
-                <span class="focus-input100"></span>
-              </div>
-              <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                <span class="label-input100">Email</span>
-                <input class="input100" type="text" required name="email" placeholder="Enter your email addess">
-                <span class="focus-input100"></span>
-              </div>
-
-              <div class="wrap-input100 validate-input" data-validate="Company required (if not applicable put N/A)">
-                <span class="label-input100">Company</span>
-                <input class="input100" type="text" required name="company" placeholder="Enter your company name">
-                <span class="focus-input100"></span>
-              </div>
+    </div>
 
 
-              <div class="wrap-input100 validate-input" data-validate="Message is required">
-                <span class="label-input100">Message</span>
-                <textarea class="input100" name="message" required placeholder="Your message here..."></textarea>
-                <span class="focus-input100"></span>
-              </div>
+    <div id="features" class="home-features">
 
-              <div class="container-contact100-form-btn">
-                <div class="wrap-contact100-form-btn">
-                  <div class="contact100-form-bgbtn"></div>
-                  <button class="contact100-form-btn">
-                    <span>
-                      Submit
-                      <i type="submit" onclick="sendEmail()" class="fa fa-long-arrow-right m-l-7"
-                        aria-hidden="true"></i>
-                    </span>
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
+      <div id="feature-text" class="featureText">
+        <h1 class="home-text03"> What Can We Offer ? </h1>
+        <p class="home-text06">Our website building business provides a comprehensive range of services to
+          create tailored and professional online presences. Our skilled team collaborates closely with
+          clients, understanding their unique needs and goals. From custom design to responsive development,
+          SEO, and social media integration, we deliver visually stunning, user-friendly websites that drive
+          results.</p>
+      </div>
+
+      <div class="home-container06">
+        <div class="feature-card1-feature-card">
+          <img alt="image" src="public/features1-200h.png" class="feature-card1-image" />
+          <h2 class="feature-card1-text"><span>E-Commerce</span></h2>
+          <span class="feature-card1-text1">
+            <span>Elevate your website with cutting-edge features. Our team crafts stunning visuals,
+              seamless navigation, and enhanced functionality. From interactivity to multimedia
+              integration, our comprehensive features captivate and delight.</span>
+          </span>
         </div>
-      </section>
+        <div class="feature-card2-feature-card">
+          <img alt="image" src="public/first-aid-kit1-200h.png" class="feature-card2-image" />
+          <h2 class="feature-card2-text"><span>Support</span></h2>
+          <span class="feature-card2-text1">
+            <span>We have your back every step of the way. Our dedicated support team offers prompt
+              assistance and resolves queries. From technical guidance to content updates, we ensure a
+              reliable and dynamic website.</span>
+          </span>
+        </div>
+        <div class="feature-card3-feature-card">
+          <img alt="image" src="public/money-200h.png" class="feature-card3-image" />
+          <h2 class="feature-card3-text"><span>Low Cost</span></h2>
+          <span class="feature-card3-text1">
+            <span>Exceptional web design without the hefty price tag. Our affordability delivers
+              cost-effective solutions without compromising quality. Responsive web design services
+              that fit your budget.</span>
+          </span>
+        </div>
+        <div class="feature-card4-feature-card">
+          <img alt="image" src="public/settings1-200h.png" class="feature-card4-image" />
+          <h2 class="feature-card4-text"><span>Bespoke Designs</span></h2>
+          <span class="feature-card4-text1">
+            <span>Reflect your vision with a unique website. Our designers
+              understand your brand, objectives, and audience. Tailored elements, from colors to
+              typography, create an authentic representation of your brand's personality.</span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <section class="home-contact" id="homecontact">
+      <img alt="image" src="public/waves-white.svg" class="home-image3" />
+      <img alt="image" src="public/top.svg" class="home-top-wave-image" />
+      <div class="container-contact100" id="homecontact">
+        <div class="wrap-contact100">
+          <form action="https://formsubmit.co/d6e3b8a19e64bf97194f61af4fa12f48" method="POST"
+            class="contact100-form validate-form">
+            <span class="contact100-form-title">
+              Get In Touch!
+            </span>
+            <div class="wrap-input100 validate-input" data-validate="Name is required">
+              <span class="label-input100">Your Name</span>
+              <input class="input100" required type="text" name="name" placeholder="Enter your name">
+              <span class="focus-input100"></span>
+            </div>
+            <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+              <span class="label-input100">Email</span>
+              <input class="input100" type="text" required name="email" placeholder="Enter your email addess">
+              <span class="focus-input100"></span>
+            </div>
+
+            <div class="wrap-input100 validate-input" data-validate="Company required (if not applicable put N/A)">
+              <span class="label-input100">Company</span>
+              <input class="input100" type="text" required name="company" placeholder="Enter your company name">
+              <span class="focus-input100"></span>
+            </div>
+
+
+            <div class="wrap-input100 validate-input" data-validate="Message is required">
+              <span class="label-input100">Message</span>
+              <textarea class="input100" name="message" required placeholder="Your message here..."></textarea>
+              <span class="focus-input100"></span>
+            </div>
+
+            <div class="container-contact100-form-btn">
+              <div class="wrap-contact100-form-btn">
+                <div class="contact100-form-bgbtn"></div>
+                <button class="contact100-form-btn">
+                  <span>
+                    Submit
+                    <i type="submit" onclick="sendEmail()" class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
 
 
 
-      <footer class="footer-gray-footer footer-gray-root-class-name1">
-        <div class="footer-gray-divider"></div>
-        <div class="footer-gray-container">
-          <div class="footer-gray-container1">
-            <div class="footer-gray-container2">
-              <span class="footer-gray-text">Compile Digital</span>
-              <span class="footer-gray-text01">Links</span>
-              <div class="footer-gray-container3">
-                <!-- 
+    <footer class="footer-gray-footer footer-gray-root-class-name1">
+      <div class="footer-gray-divider"></div>
+      <div class="footer-gray-container">
+        <div class="footer-gray-container1">
+          <div class="footer-gray-container2">
+            <span class="footer-gray-text">Compile Digital</span>
+            <span class="footer-gray-text01">Links</span>
+            <div class="footer-gray-container3">
+              <!-- 
                 <svg viewBox="0 0 877.7142857142857 1024" class="footer-gray-icon">
                   <path
                     d="M713.143 73.143c90.857 0 164.571 73.714 164.571 164.571v548.571c0 90.857-73.714 164.571-164.571 164.571h-107.429v-340h113.714l17.143-132.571h-130.857v-84.571c0-38.286 10.286-64 65.714-64l69.714-0.571v-118.286c-12-1.714-53.714-5.143-101.714-5.143-101.143 0-170.857 61.714-170.857 174.857v97.714h-114.286v132.571h114.286v340h-304c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571z">
@@ -422,58 +455,58 @@
                 </svg>
                 -->
 
-                <a href="mailto:ruman@compiledigital.com" target="_blank">
-                  <svg viewBox="0 0 8 6" class="footer-gray-icon2" xmlns="http://www.w3.org/2000/svg">
-                    <path d="m0 0h8v6h-8zm.75 .75v4.5h6.5v-4.5zM0 0l4 3 4-3v1l-4 3-4-3z" />
-                  </svg>
-                </a>
+              <a href="mailto:ruman@compiledigital.com" target="_blank">
+                <svg viewBox="0 0 8 6" class="footer-gray-icon2" xmlns="http://www.w3.org/2000/svg">
+                  <path d="m0 0h8v6h-8zm.75 .75v4.5h6.5v-4.5zM0 0l4 3 4-3v1l-4 3-4-3z" />
+                </svg>
+              </a>
 
-                <a href="" target="_blank">
-                  <svg class="footer-gray-icon4" xmlns="http://www.w3.org/2000/svg" viewBox="0 12 229 247">
-                    <rect width="256" height="256" fill="none" />
-                    <circle cx="128" cy="128" r="32" />
-                    <path
-                      d="M172,28H84A56,56,0,0,0,28,84v88a56,56,0,0,0,56,56h88a56,56,0,0,0,56-56V84A56,56,0,0,0,172,28ZM128,176a48,48,0,1,1,48-48A48,48,0,0,1,128,176Zm52-88a12,12,0,1,1,12-12A12,12,0,0,1,180,88Z" />
-                  </svg>
-                </a>
+              <a href="" target="_blank">
+                <svg class="footer-gray-icon4" xmlns="http://www.w3.org/2000/svg" viewBox="0 12 229 247">
+                  <rect width="256" height="256" fill="none" />
+                  <circle cx="128" cy="128" r="32" />
+                  <path
+                    d="M172,28H84A56,56,0,0,0,28,84v88a56,56,0,0,0,56,56h88a56,56,0,0,0,56-56V84A56,56,0,0,0,172,28ZM128,176a48,48,0,1,1,48-48A48,48,0,0,1,128,176Zm52-88a12,12,0,1,1,12-12A12,12,0,0,1,180,88Z" />
+                </svg>
+              </a>
 
-                <a href="https://www.linkedin.com/in/ruman-s-89a30b1b8/" target="_blank">
-                  <svg viewBox="0 0 1024 1024" class="footer-gray-icon6">
-                    <path
-                      d="M928 0h-832c-52.8 0-96 43.2-96 96v832c0 52.8 43.2 96 96 96h832c52.8 0 96-43.2 96-96v-832c0-52.8-43.2-96-96-96zM384 832h-128v-448h128v448zM320 320c-35.4 0-64-28.6-64-64s28.6-64 64-64c35.4 0 64 28.6 64 64s-28.6 64-64 64zM832 832h-128v-256c0-35.4-28.6-64-64-64s-64 28.6-64 64v256h-128v-448h128v79.4c26.4-36.2 66.8-79.4 112-79.4 79.6 0 144 71.6 144 160v288z">
-                    </path>
-                  </svg>
-                </a>
+              <a href="https://www.linkedin.com/in/ruman-s-89a30b1b8/" target="_blank">
+                <svg viewBox="0 0 1024 1024" class="footer-gray-icon6">
+                  <path
+                    d="M928 0h-832c-52.8 0-96 43.2-96 96v832c0 52.8 43.2 96 96 96h832c52.8 0 96-43.2 96-96v-832c0-52.8-43.2-96-96-96zM384 832h-128v-448h128v448zM320 320c-35.4 0-64-28.6-64-64s28.6-64 64-64c35.4 0 64 28.6 64 64s-28.6 64-64 64zM832 832h-128v-256c0-35.4-28.6-64-64-64s-64 28.6-64 64v256h-128v-448h128v79.4c26.4-36.2 66.8-79.4 112-79.4 79.6 0 144 71.6 144 160v288z">
+                  </path>
+                </svg>
+              </a>
 
-              </div>
-            </div>
-            <div class="footer-gray-container4">
-              <div class="footer-gray-container5">
-                <span class="footer-gray-text02">
-                  <span class="Large">Pages</span>
-                  <br />
-                </span>
-                <a href="index.html" class="footer-gray-text05 Large">Home</a>
-                <a href="testimonals.html" class="footer-gray-text06 Large">Testimonials</a>
-                <a href="index.html" class="footer-gray-text07">
-                  <a href="faq.html" class="Large">FAQ's</a>
-                  <br />
-                  </span>
-              </div>
-              <div class="footer-gray-container6">
-                <span class="footer-gray-text10 Large">
-                  Help &amp; Support
-                </span>
-                <a href="index.html#homecontact" class="footer-gray-text11 Large">Contact Us</a>
-              </div>
             </div>
           </div>
-          <span class="footer-gray-text12">
-            UK Based Company Operating Remotley
-          </span>
+          <div class="footer-gray-container4">
+            <div class="footer-gray-container5">
+              <span class="footer-gray-text02">
+                <span class="Large">Pages</span>
+                <br />
+              </span>
+              <a href="index.html" class="footer-gray-text05 Large">Home</a>
+              <a href="testimonals.html" class="footer-gray-text06 Large">Testimonials</a>
+              <a href="index.html" class="footer-gray-text07">
+                <a href="faq.html" class="Large">FAQ's</a>
+                <br />
+                </span>
+            </div>
+            <div class="footer-gray-container6">
+              <span class="footer-gray-text10 Large">
+                Help &amp; Support
+              </span>
+              <a href="index.html#homecontact" class="footer-gray-text11 Large">Contact Us</a>
+            </div>
+          </div>
         </div>
-      </footer>
-    </div>
+        <span class="footer-gray-text12">
+          UK Based Company Operating Remotley
+        </span>
+      </div>
+    </footer>
+  </div>
 
 
   <script data-section-id="header" src="./scripts/nav.js"></script>

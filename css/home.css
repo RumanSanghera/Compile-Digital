@@ -19,7 +19,6 @@
   cursor: pointer;
   transform: scale(1.02);
 }
-
 .outline-gray-button-container {
   display: flex;
   position: relative;
@@ -86,8 +85,72 @@
   color: var(--dl-color-gray-700);
   text-align: center;
 }
+.project-IMG {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto; /* Changed this line to allow automatic width adjustment */
+  height: auto; /* Changed this line to allow automatic height adjustment */
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 16px;
+  border-radius: 5px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  position: relative;
+  transition: transform 0.2s ease-in-out;
+}
+.read-more-btn {
+  color: var(--dl-color-gray-white);
+  outline: none;
+  background:  linear-gradient( 310deg ,#7928ca,#ff0080);
+  box-shadow: 0 4px 7px -1px rgb(0 0 0 / 11%), 0 2px 4px -1px rgb(0 0 0 / 7%);
+  transition: all .15s ease-in;
+  padding-top: var(--dl-space-space-triplequarterunit);
+  border-width: 0px;
+  padding-left: var(--dl-space-space-unitandahalfunit);
+  border-radius: 1.875rem;
+  padding-right: var(--dl-space-space-unitandahalfunit);
+  padding-bottom: var(--dl-space-space-triplequarterunit);
+}
 
+.project-IMG::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 128, 128, 0.5); /* Grey transparent color */
+  border-radius: 5px;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
 
+.project-IMG:hover {
+  transform: scale(1.1); /* Slightly larger on hover */
+}
+
+.project-IMG:hover::before {
+  opacity: 1; /* Clear on hover */
+}
+.projectDiv{
+    width: 100%;
+    display: grid;
+    grid-gap: 64px;
+    grid-template-columns: 1fr 1fr 1fr;
+    position: relative;
+    margin-top: 64px;
+}
+
+.project-container {
+  display: flex;
+  background: none;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  animation: testimonialAnimation 0.5s ease-in-out forwards;
+}
 
 
 
@@ -555,11 +618,25 @@
   width: 100%;
   display: flex;
   padding-left: 10%;
-  padding-right: var(--dl-space-space-unitandahalfunit);
-
+  padding-right: 10%;
+  max-width: 2500px;
+}
+.home-hero2 {
+  width: 100%;
+  display: flex;
+  padding-left: 10%;
+  padding-right: 10%;
+  height: 100vh;
+  max-width: 2500px;
+}
+.home-container07 {
+  width: 100%;
+  display: flex;
+  position: relative;
+  min-height: 75vh;
+  flex-direction: column;
   /*justify-content: center;*/
 }
-
 .home-container03 {
   width: 100%;
   height: 100vh;
@@ -662,11 +739,19 @@
   width: 100%;
   height: 100%;
   display: flex;
-  padding: 48px;
-  max-width: 1400px;
+  max-width: 2500px;
   align-items: center;
   flex-direction: column;
   padding-bottom: 80px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.home-project-text{
+ 
+}
+.home-project-text.fade-in {
+
 }
 
 .featureText,
@@ -760,19 +845,6 @@
   z-index: 0;
   position: absolute;
   object-fit: cover;
-}
-.home-container07 {
-  width: 500px;
-  height: 750px;
-  position: absolute;
-  left: 50%;
-  top: 60%;
-  transform: translate(-50%, -50%);
-  box-shadow: 5px 5px 10px 0px #545454;
-  border-radius: var(--dl-radius-radius-radius75);
-  /*backdrop-filter: saturate(200%) blur(30px);*/
-  background-color:#FFFFFF;
-  /*background-color: rgba(241, 241, 241, 0.81);*/
 }
 .home-text07 {
   margin: 0 0 40px;
@@ -972,10 +1044,16 @@ input::placeholder {
 
 @media(max-width: 991px) {
   .home-container07{
+    /*
     width: 500px;
     height: 750px;
-    top: 50%;
+    top: 50%;*/
     
+  }
+  .projectDiv{
+    grid-template-columns: 1fr; /* Set 1 column with 1 fractional unit */
+    grid-template-rows: 1fr 1fr 1fr; 
+    grid-gap: 20px;
   }
   .home-icon06 {
     display: flex;
@@ -1008,8 +1086,10 @@ input::placeholder {
     height: 1200px;
   }
   .home-container07{
+    /*
     width: 80%;
     height: 700px;
+    */
     
   }
   .home-header {
@@ -1074,8 +1154,10 @@ input::placeholder {
     height: 1000px;
   }
   .home-container07{
+    /*
     height: 700px;
     width: 90%;
+    */
   }
   .home-icon-group {
     display: none;
