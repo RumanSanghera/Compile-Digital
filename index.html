@@ -123,6 +123,7 @@
     }
   </style>
   <link rel="shortcut icon" href="public/favicon.ico" type="icon/png" sizes="32x32" />
+
   <link rel="stylesheet" type="text/css" href="css/contact.css">
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&amp;display=swap"
@@ -160,6 +161,7 @@
     }
   </style>
   <link rel="stylesheet" href="./css/style.css" />
+
 </head>
 
 <body>
@@ -207,45 +209,85 @@
         });
 
         function isElementInViewport(element) {
-        const rect = element.getBoundingClientRect();
-        return (
-          rect.top >= -50 &&
-          rect.top <= (window.innerHeight || document.documentElement.clientHeight)
-        );
-      }
-
-      function handleScroll2() {
-        const heroElement = document.getElementById('homecontact');
-        if (isElementInViewport(heroElement)) {
-          heroElement.classList.add('fade-in');
-          window.removeEventListener('scroll', handleScroll2); // Remove the event listener after animation
+          const rect = element.getBoundingClientRect();
+          return (
+            rect.top >= -50 &&
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight)
+          );
         }
-      }
 
-      function handleScroll() {
+        function handleScroll2() {
+          const heroElement = document.getElementById('homecontact');
+          if (isElementInViewport(heroElement)) {
+            heroElement.classList.add('fade-in');
+            window.removeEventListener('scroll', handleScroll2); // Remove the event listener after animation
+          }
+        }
 
-        const featuresElement = document.getElementById('feature-text');
+        function handleScroll() {
 
-        if (isElementInViewport(featuresElement)) {
-          featuresElement.classList.add('fade-in');
-          const cards = document.querySelectorAll('.home-features .feature-card1-feature-card, .home-features .feature-card2-feature-card, .home-features .feature-card3-feature-card, .home-features .feature-card4-feature-card');
-          let delay = 0.2; // Initial delay for the first card
-          for (let i = 0; i < cards.length; i++) {
-            setTimeout(function (card) {
-              card.classList.add('fade-in');
-            }, delay * 1000, cards[i]);
-            delay += 0.2; // Increment the delay for subsequent cards
+          const featuresElement = document.getElementById('feature-text');
+
+          if (isElementInViewport(featuresElement)) {
+            featuresElement.classList.add('fade-in');
+            const cards = document.querySelectorAll('.home-features .feature-card1-feature-card, .home-features .feature-card2-feature-card, .home-features .feature-card3-feature-card, .home-features .feature-card4-feature-card');
+            let delay = 0.2; // Initial delay for the first card
+            for (let i = 0; i < cards.length; i++) {
+              setTimeout(function (card) {
+                card.classList.add('fade-in');
+              }, delay * 1000, cards[i]);
+              delay += 0.2; // Increment the delay for subsequent cards
+            }
+
+            window.removeEventListener('scroll', handleScroll); // Remove the event listener after animation
           }
 
-          window.removeEventListener('scroll', handleScroll); // Remove the event listener after animation
+        }
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll2);
+        
+        function isInViewport(el) {
+          const rect = el.getBoundingClientRect();
+          return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+          );
         }
 
-      }
+        // Function to handle animations
+        function handleAnimations() {
+          const projectDiv = document.querySelector('.projectDiv');
+          const imgElements = document.querySelectorAll('.project-IMG');
 
-      window.addEventListener('scroll', handleScroll);
-      window.addEventListener('scroll', handleScroll2);
+          if (isInViewport(projectDiv)) {
+            projectDiv.classList.add('animate-fadeIn');
+
+            //imgElements.forEach((imgElement, index) => {
+            //  setTimeout(() => {
+            //    imgElement.classList.add('animate-slideIn');
+            //  }, index * 300); // Delay each image animation
+            //});
+
+            // Remove the scroll event listener once animations are triggered
+            window.removeEventListener('scroll', handleAnimations);
+          }
+        }
+
+        // Add a scroll event listener
+        window.addEventListener('scroll', handleAnimations);
+
+        // Trigger animations on initial page load (in case element is already in viewport)
+        handleAnimations();
+
+
+
+
+
+
       </script>
-      
+
 
       <div data-role="MobileMenu" class="home-mobile-menu">
         <div class="home-nav2">
@@ -301,23 +343,31 @@
     <img alt="image" src="public/back.jpg" class="home-image2" />
 
 
-    <div class="home-hero2">
+    <div class="home-hero2" id="projectid">
       <div id="home" class="home-container07">
 
 
         <div class="home-project-text">
-          <h1 class="home-text03"> Our Projects </h1>
-          <p class="home-text06">Here are some of our projects we have worked on...</p>
+          <h1 class="home-text03">Our Endeavors</h1>
+          <p class="home-text06">Dive into a Selection of Our Projects</p>
         </div>
 
-
+        
 
         <div class="projectDiv">
+          <div class="project-container">
+            <a href="https://jacobdtutor.com/">
+              <img alt="profile" src="public/jaocb.JPG" class="project-IMG" />
+            </a>
+            
+            <button href="" class="primary-pink-button-button button ButtonSmall">
+              <span>Read More</span>
+            </button>
+          </div>
           <div class="project-container">
             <a href="https://flexntone.co.uk/">
               <img alt="profile" src="public/flexntone.PNG" class="project-IMG" />
             </a>
-            <span class="">Flex 'N' Tone</span>
             <button href="" class="primary-pink-button-button button ButtonSmall">
               <span>Read More</span>
             </button>
@@ -326,11 +376,11 @@
             <a href="https://owenmasseyfilm.com/">
               <img alt="profile" src="public/owenmasseyfilms.PNG" class="project-IMG" />
             </a>
-            <span class="">Owen Massey Film</span>
             <button href="" class="primary-pink-button-button button ButtonSmall">
               <span>Read More</span>
             </button>
           </div>
+          
         </div>
       </div>
     </div>
