@@ -338,6 +338,90 @@
   display: flex;
   justify-content: center;
   margin-top: 140px;
+  margin-bottom: 250px;
+}
+.testimonial-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* Creates 3 equal-width columns */
+  grid-gap: 50px 50px;
+  /* Adds a 10px gap between grid items */
+}
+/* Define the initial state of the element */
+.testimonial-item {
+  position: relative;
+  text-align: center;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--light);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border-radius: 10px;
+  height: 100%;
+  opacity: 0;
+  animation: fadeIn4 1.5s ease-in-out;
+
+}
+
+@keyframes fadeIn4 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.testimonial-item {
+  animation: fadeIn4 1s ease-in-out;
+  opacity: 1;
+}
+
+.testimonial-item .testimonial-text {
+  position: relative;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.testimonial-item .testimonial-text .btn-square {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.testimonial-details {
+
+  height: auto;
+  /* Set the desired height for the child div */
+  margin-bottom: 20px;
+  width: 100%;
+}
+.rating-container {
+  display: inline-block;
+  margin-bottom: 1rem;
+  vertical-align: middle;
+}
+
+.rating-stars {
+  display: inline-block;
+  font-size: 40px;
+  /* Remove whitespace between inline-block elements */
+}
+
+.rating-stars::before {
+  content: "★★★★★";
+  color: gold;
+}
+
+.rating-container::after {
+  content: attr(data-rating);
+  display: inline-block;
+  margin-left: 0.5rem;
 }
 
 .testimonals-container3 {
@@ -488,7 +572,36 @@
   }
 }
 
+.btn-square{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    border-radius: 50% !important;
+    border: 1px solid #DFE4FD !important;
+    overflow: hidden;
+  
+}
 
+.round-icon {
+  width: 100%; /* Adjust the width and height as per your requirement */
+  height: auto;
+  border-radius: 50%; /* This creates the circular shape */
+  overflow: hidden; /* Clip any content outside the circle */
+}
+
+.round-icon img {
+  width: 100%; /* Ensure the image takes the full circular area */
+  height: 100%;
+  object-fit: cover; /* Preserve the aspect ratio of the image */
+}
 .overlay {
   position: fixed;
   display: none;
@@ -521,9 +634,12 @@
 
 }
 .testimonals-text05 {
-  font-size: 1.5rem;
+  font-size: 13px;
   font-weight: 300;
   margin-bottom: var(--dl-space-space-halfunit);
+  margin-top: 70px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 .testimonals-text07 {
   color: var(--dl-color-gray-500);

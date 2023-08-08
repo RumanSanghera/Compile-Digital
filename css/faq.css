@@ -166,7 +166,7 @@
   cursor: pointer;
   padding: 18px;
   width: 100%;
-  font-weight: 600;
+  font-weight: 500;
   text-align: left;
   font-size: 15px;
   transition: 0.2s;
@@ -231,15 +231,15 @@
   display: flex;
   height: 100%;
   transform: translateY(-100%);
-  animation: slideInTop 1s ease-in-out forwards;
+  animation: slideInLeft 0.8s ease-in-out forwards;
 }
 
-@keyframes slideInTop {
+@keyframes slideInLeft {
   from {
-    transform: translateY(-100%);
+    transform: translateX(-100%);
   }
   to {
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
 
@@ -251,24 +251,25 @@
   color: #757575;
   opacity: 0; /* Hide the element initially */
   transform: translateX(-100%); /* Move the element outside the viewport */
-  animation: slide-in 0.5s forwards; /* Apply the animation */
-  animation-delay: 1s; /* Add a delay to start the animation after 1 second */
+  animation: slide-in 0.5s forwards; 
+  animation-delay: 1s; 
 
 }
 
 @keyframes slide-in {
   0% {
     opacity: 0;
-    transform: translateX(-100%);
+    transform: translateY(-100%);
   }
   100% {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 .faq-text02{
-  margin: 20px 30px 30px 30px;
-
+  width: 50%;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .left-div,
