@@ -347,6 +347,7 @@
   grid-gap: 50px 50px;
   /* Adds a 10px gap between grid items */
 }
+/* Define the initial state of the element */
 .testimonial-item {
   position: relative;
   text-align: center;
@@ -359,18 +360,35 @@
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   border-radius: 10px;
   height: 100%;
+  opacity: 0;
+  animation: fadeIn4 1.5s ease-in-out;
 
 }
+
+@keyframes fadeIn4 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.testimonial-item {
+  animation: fadeIn4 1s ease-in-out;
+  opacity: 1;
+}
+
 .testimonial-item .testimonial-text {
   position: relative;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 25px;
 }
 
 .testimonial-item .testimonial-text .btn-square {
   position: absolute;
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   top: -30px;
   left: 50%;
   transform: translateX(-50%);
@@ -556,8 +574,8 @@
 
 .btn-square{
     position: absolute;
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     top: -30px;
     left: 50%;
     transform: translateX(-50%);
@@ -569,6 +587,7 @@
     border-radius: 50% !important;
     border: 1px solid #DFE4FD !important;
     overflow: hidden;
+  
 }
 
 .round-icon {
@@ -618,7 +637,7 @@
   font-size: 13px;
   font-weight: 300;
   margin-bottom: var(--dl-space-space-halfunit);
-  margin-top: 55px;
+  margin-top: 70px;
   margin-left: 20px;
   margin-right: 20px;
 }
