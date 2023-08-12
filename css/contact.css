@@ -29,24 +29,8 @@ html {
     font-family: Poppins-Regular, sans-serif
 }
 .container-contact100 {
-    width: 100%;
-    min-height: 100%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-    /*
-    background: #a64bf4;
-    background: -webkit-linear-gradient(230deg, #7928ca,#ff0080);
-    background: -o-linear-gradient(230deg, #7928ca,#ff0080);
-    background: -moz-linear-gradient(230deg, #7928ca,#ff0080);
-    background: linear-gradient(230deg, #7928ca,#ff0080);
-    */
+    flex: 1; 
+    text-align: center;
 }
 
 .wrap-contact100 {

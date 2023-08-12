@@ -162,6 +162,7 @@
   </style>
   <link rel="stylesheet" href="./css/style.css" />
 
+
 </head>
 
 <body>
@@ -186,7 +187,7 @@
             Testimonials
           </a>
           <a href="faq.html" class="home-button button">FAQ</a>
-          <a href="#" onclick="scrollToDiv('homecontact')" class="home-button button">Contact Us</a>
+          <a href="#" onclick="scrollToDiv('homecontact')" class="home-button2 button">Book A Call</a>
         </nav>
       </div>
       <img alt="image" src="public/compilelogo-200h.png" class="home-image" id="image-link" />
@@ -245,7 +246,7 @@
         }
         window.addEventListener('scroll', handleScroll);
         window.addEventListener('scroll', handleScroll2);
-        
+
         function isInViewport(el) {
           const rect = el.getBoundingClientRect();
           return (
@@ -305,7 +306,7 @@
             <a href="#home" class="home-navlink1 home-active button">Home</a>
             <a href="testimonals.html" class="home-navlink1 button">Testimonials</a>
             <a href="faq.html" class="home-navlink1 button">FAQ</a>
-            <a href="#" onclick="scrollToDiv('homecontact')" class="home-navlink1 button">Contact Us</a>
+            <a href="#" onclick="scrollToDiv('homecontact')" class="home-navlink2 button">Book A Call</a>
           </div>
         </div>
       </div>
@@ -324,7 +325,7 @@
               <a href="#contact" class="home-link1">
                 <div class="primary-pink-button-container">
                   <button class="primary-pink-button-button button ButtonSmall">
-                    <span>contact us</span>
+                    <span>Book A Call</span>
                   </button>
                 </div>
               </a>
@@ -352,29 +353,29 @@
           <p class="home-text06">Dive into a Selection of Our Latest Work</p>
         </div>
 
-        
+
 
         <div class="projectDiv">
           <div class="project-container">
             <a href="https://jacobdtutor.com/">
               <img loading="lazy" alt="profile" src="public/jacob.png" class="project-IMG" />
             </a>
-            
-            
+
+
           </div>
           <div class="project-container">
             <a href="https://flexntone.co.uk/">
               <img loading="lazy" alt="profile" src="public/flexntone.PNG" class="project-IMG" />
             </a>
-            
+
           </div>
           <div class="project-container">
             <a href="https://owenmasseyfilm.com/">
               <img loading="lazy" alt="profile" src="public/owenmasseyfilms.PNG" class="project-IMG" />
             </a>
-            
+
           </div>
-          
+
         </div>
       </div>
     </div>
@@ -434,53 +435,19 @@
     <section class="home-contact" id="homecontact">
       <img loading="lazy" alt="image" src="public/waves-white.svg" class="home-image3" />
       <img loading="lazy" alt="image" src="public/top.svg" class="home-top-wave-image" />
+
+
+      
       <div class="container-contact100" id="homecontact">
-        <div class="wrap-contact100">
-          <form action="https://formsubmit.co/d6e3b8a19e64bf97194f61af4fa12f48" method="POST"
-            class="contact100-form validate-form">
-            <span class="contact100-form-title">
-              Get In Touch!
-            </span>
-            <div class="wrap-input100 validate-input" data-validate="Name is required">
-              <span class="label-input100">Your Name</span>
-              <input class="input100" required type="text" name="name" placeholder="Enter your name">
-              <span class="focus-input100"></span>
-            </div>
-            <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-              <span class="label-input100">Email</span>
-              <input class="input100" type="text" required name="email" placeholder="Enter your email addess">
-              <span class="focus-input100"></span>
-            </div>
-
-            <div class="wrap-input100 validate-input" data-validate="Company required (if not applicable put N/A)">
-              <span class="label-input100">Company</span>
-              <input class="input100" type="text" required name="company" placeholder="Enter your company name">
-              <span class="focus-input100"></span>
-            </div>
-
-
-            <div class="wrap-input100 validate-input" data-validate="Message is required">
-              <span class="label-input100">Message</span>
-              <textarea class="input100" name="message" required placeholder="Your message here..."></textarea>
-              <span class="focus-input100"></span>
-            </div>
-
-            <div class="container-contact100-form-btn">
-              <div class="wrap-contact100-form-btn">
-                <div class="contact100-form-bgbtn"></div>
-                <button class="contact100-form-btn">
-                  <span>
-                    Submit
-                    <i type="submit" onclick="sendEmail()" class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
-                  </span>
-                </button>
-              </div>
-            </div>
-          </form>
+        <h1 class="home-text08">Book A Call </h1>
+        <div class="calendly-inline-widget calender" data-url="https://calendly.com/compiledigital/meeting?hide_landing_page_details=1&hide_event_type_details=1&hide_gdpr_banner=1">
         </div>
-      </div>
-    </section>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
+      </div>
+
+
+    </section>
 
 
     <footer class="footer-gray-footer footer-gray-root-class-name1">
@@ -541,7 +508,7 @@
               <span class="footer-gray-text10 Large">
                 Help &amp; Support
               </span>
-              <a href="index.html#homecontact" class="footer-gray-text11 Large">Contact Us</a>
+              <a href="index.html#homecontact" class="footer-gray-text11 Large">Book A Call</a>
             </div>
           </div>
         </div>
