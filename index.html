@@ -12,6 +12,8 @@
   <meta charset="utf-8" />
   <meta property="twitter:card" content="summary_large_image" />
 
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Outfit' rel='stylesheet'>
   <style data-tag="reset-style-sheet">
     html {
       line-height: 1.15;
@@ -123,7 +125,8 @@
     }
   </style>
   <link rel="shortcut icon" href="public/favicon.ico" type="icon/png" sizes="32x32" />
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./css/carosel.css">
   <link rel="stylesheet" type="text/css" href="css/contact.css">
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&amp;display=swap"
@@ -162,15 +165,15 @@
   </style>
   <link rel="stylesheet" href="./css/style.css" />
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD9DPTZ2CP">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD9DPTZ2CP">
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-FD9DPTZ2CP');
-</script>
+    gtag('config', 'G-FD9DPTZ2CP');
+  </script>
 
 
 </head>
@@ -197,7 +200,7 @@
             Testimonials
           </a>
           <a href="faq.html" class="home-button button">FAQ</a>
-          <a href="#" onclick="scrollToDiv('homecontact')" class="home-button2 button">Book A Call</a>
+          <a href="#" onclick="scrollToDiv('homecontact')" class="home-button button">Book A Call</a>
         </nav>
       </div>
       <img alt="image" src="public/compilelogo-200h.png" class="home-image" id="image-link" />
@@ -205,6 +208,23 @@
 
 
       <script>
+
+        const header = document.querySelector('.home-header');
+        let isHeaderAtTop = true;
+
+        function updateHeaderState() {
+          if (window.scrollY > 0 && isHeaderAtTop) {
+            header.classList.add('header-shadow');
+            isHeaderAtTop = false;
+          } else if (window.scrollY === 0 && !isHeaderAtTop) {
+            header.classList.remove('header-shadow');
+            isHeaderAtTop = true;
+          }
+        }
+
+        window.addEventListener('scroll', updateHeaderState);
+
+
         function scrollToDiv(divId) {
           const targetDiv = document.getElementById(divId);
           const scrollPosition = targetDiv.offsetTop - (window.innerHeight / 2) + (targetDiv.offsetHeight / 2);
@@ -316,12 +336,30 @@
             <a href="#home" class="home-navlink1 home-active button">Home</a>
             <a href="testimonals.html" class="home-navlink1 button">Testimonials</a>
             <a href="faq.html" class="home-navlink1 button">FAQ</a>
-            <a href="#" onclick="scrollToDiv('homecontact')" class="home-navlink2 button">Book A Call</a>
+            <a href="#" onclick="scrollToDiv('homecontact')" class="home-navlink1 button">Book A Call</a>
           </div>
         </div>
       </div>
     </header>
 
+    <div class="home-hero">
+      
+      <div id="home" class="home-container03">
+        <h1 class="home-text">Turn your business into a
+          powerful </h1>
+        <span class="home-text02">
+          Unlock Your Digital Potential with Bespoke Website Designs Tailored to Perfection
+        </span>
+      </div>
+
+    </div>
+
+    <div class="box">
+      
+    </div>
+
+
+    <!--
     <div class="home-hero">
       <div id="home" class="home-container03">
         <div class="home-card">
@@ -351,7 +389,8 @@
         </div>
       </div>
     </div>
-    <img alt="image" src="public/back.jpg" class="home-image2" />
+
+   <img alt="image" src="public/back.jpg" class="home-image2" />-->
 
 
     <div class="home-hero2" id="projectid">
@@ -387,8 +426,18 @@
           </div>
 
         </div>
+
       </div>
     </div>
+
+
+    <!-- partial -->
+    <script src='https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js'></script>
+
+
+
+
+
 
 
     <div id="features" class="home-features">
@@ -447,10 +496,11 @@
       <img loading="lazy" alt="image" src="public/top.svg" class="home-top-wave-image" />
 
 
-      
+
       <div class="container-contact100" id="homecontact">
         <h1 class="home-text08">Book A Call </h1>
-        <div class="calendly-inline-widget calender" data-url="https://calendly.com/compiledigital/meeting?hide_landing_page_details=1&hide_event_type_details=1&hide_gdpr_banner=1">
+        <div class="calendly-inline-widget calender"
+          data-url="https://calendly.com/compiledigital/meeting?hide_landing_page_details=1&hide_event_type_details=1&hide_gdpr_banner=1">
         </div>
         <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
