@@ -1,196 +1,116 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-
-@-webkit-keyframes carousel-animate {
-    0% {
-        visibility: hidden;
-        opacity: 0;
-        transform: translateX(200%) scale(0.7);
-    }
-
-    3%,
-    14.2857142857% {
-        visibility: visible;
-        opacity: 0.8;
-        transform: translateX(100%) scale(0.9);
-    }
-
-    17.2857142857%,
-    28.5714285714% {
-        visibility: visible;
-        opacity: 1;
-        transform: translateX(0) scale(1);
-    }
-
-    31.5714285714%,
-    42.8571428571% {
-        visibility: visible;
-        opacity: 0.8;
-        transform: translateX(-100%) scale(0.9);
-    }
-
-    45.8571428571% {
-        visibility: visible;
-        opacity: 0;
-        transform: translateX(-200%) scale(0.9);
-    }
-
-    100% {
-        visibility: hidden;
-        opacity: 0;
-        transform: translateX(-200%) scale(0.7);
-    }
+.test{
+    background-color: rgb(96, 13, 138);
+    height: 100vh;
+    
 }
 
-@keyframes carousel-animate {
-    0% {
-        visibility: hidden;
-        opacity: 0;
-        transform: translateX(200%) scale(0.7);
-    }
+.micro-slider {
+    height: 480px;
+    /* margin: 10px 0; */
+    position: absolute;
 
-    3%,
-    14.2857142857% {
-        visibility: visible;
-        opacity: 0.8;
-        transform: translateX(100%) scale(0.9);
-    }
-
-    17.2857142857%,
-    28.5714285714% {
-        visibility: visible;
-        opacity: 1;
-        transform: translateX(0) scale(1);
-    }
-
-    31.5714285714%,
-    42.8571428571% {
-        visibility: visible;
-        opacity: 0.8;
-        transform: translateX(-100%) scale(0.9);
-    }
-
-    45.8571428571% {
-        visibility: visible;
-        opacity: 0;
-        transform: translateX(-200%) scale(0.9);
-    }
-
-    100% {
-        visibility: hidden;
-        opacity: 0;
-        transform: translateX(-200%) scale(0.7);
-    }
+    width: 100%;
+    margin-top: -347px;
+    bottom: 0; 
 }
 
-
-
-
-
-@supports (height: 100dvh) {
-    body {
-        height: 100dvh;
-    }
+.micro-slider.fullwidth {
+    height: 480px;
+    /* margin: 64px 0; */
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.micro-slider.fullwidth .slider-item {
+    height: 480px;
+    line-height: 480px;
+    width: 100%
+}
+
+.slider-wrapper {
+    overflow: hidden;
+    position: relative;
+    transform-style: preserve-3d;
+    transform-origin: 0 50%;
+}
+
+.slider-item {
+    background: #FFF;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .06), 0 1px 2px rgba(0, 0, 0, .12);
+    color: #FFF;
+    display: none;
+    font-size: 72px;
+    height: 400px;
+    line-height: 320px;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 800px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+/*
+.slider-item:not(.active) {cursor: pointer;}
+*/
+.indicators {
+    bottom: 0px;
+    left: 50%;
+    list-style-type: none;
+    margin: 0 0 0 -23px;
+    padding: 0;
+    position: absolute;
+}
+
+.indicators li {
+    color: #fff;
+    float: left;
+    height: 16px;
+    margin-right: 8px;
+    text-align: center;
+    width: 16px;
+}
+
+.indicators li:last-child {
     margin: 0;
 }
 
-.container4 {
-    --container-padding-horizontal: 32px;
-    position: relative;
-    padding-inline: var(--container-padding-horizontal);
-    display: grid;
-    place-items: center;
-    height: 100%;
-    width: 100%;
+.indicators a {
+    background: #FFF;
+    border-radius: 8px;
+    border: 1px solid #E6E9EC;
+    color: #FFF;
+    display: inline-block;
+    height: 16px;
+    width: 16px;
 }
 
-.carousel {
-    pointer-events: none;
-    position: absolute;
-    -webkit-padding-before: 67px;
-    padding-block-start: 67px;
-    -webkit-padding-after: max(24px, calc(29px + var(--font-size-md)));
-    padding-block-end: max(24px, calc(29px + var(--font-size-md)));
-    perspective: 100px;
-    width: 100%;
+.indicators .active a {
+    background: #E6E9EC;
 }
 
-@media (max-width: 568px) {
-    .carousel {
-        -webkit-padding-after: 52px;
-        padding-block-end: 52px;
-    }
+.s1 {
+    background: url(../public/flexntone.PNG);
+    background-size: cover;
+
+}
+.s2 {
+    background: url(../public/jacob.png);
+    background-size: cover;
 }
 
-.carousel__wrapper {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    height: 61.2vh;
+.s3 {
+    background: url(../public/owenmasseyfilms.PNG);
+    background-size: cover;
 }
 
-.carousel .item {
-    position: absolute;
-    max-width: 100%;
-    height: 100%;
-    margin-inline: var(--container-padding-horizontal);
-    opacity: 0;
-    will-change: transform, opacity;
-    -webkit-animation: carousel-animate 27s cubic-bezier(0.37, 0, 0.63, 1) infinite;
-    animation: carousel-animate 27s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+.s4 {
+    background: #00bcd4;
 }
 
-@media (max-width: 568px) {
-    .carousel .item {
-        margin-inline: calc(var(--container-padding-horizontal) + 1px);
-    }
+.s5 {
+    background: #009688;
 }
 
-.carousel .item:nth-child(1) {
-    -webkit-animation-delay: calc(3.8571428571s * -1);
-    animation-delay: calc(3.8571428571s * -1);
-}
-
-.carousel .item:nth-child(2) {
-    -webkit-animation-delay: calc(3.8571428571s * 0);
-    animation-delay: calc(3.8571428571s * 0);
-}
-
-.carousel .item:nth-child(3) {
-    -webkit-animation-delay: calc(3.8571428571s * 1);
-    animation-delay: calc(3.8571428571s * 1);
-}
-
-.carousel .item:nth-child(4) {
-    -webkit-animation-delay: calc(3.8571428571s * 2);
-    animation-delay: calc(3.8571428571s * 2);
-}
-
-.carousel .item:nth-child(5) {
-    -webkit-animation-delay: calc(3.8571428571s * 3);
-    animation-delay: calc(3.8571428571s * 3);
-}
-
-.carousel .item:nth-child(6) {
-    -webkit-animation-delay: calc(3.8571428571s * 4);
-    animation-delay: calc(3.8571428571s * 4);
-}
-
-.carousel .item:last-child {
-    -webkit-animation-delay: calc(-3.8571428571s * 2);
-    animation-delay: calc(-3.8571428571s * 2);
-}
-
-.carousel img {
-    max-width: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    height: 100%;
+.s6 {
+    background: #4caf50;
 }

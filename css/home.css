@@ -785,7 +785,19 @@
   height: 16px;
 }
 
-
+.iam{
+  color: white;
+    font-size: 55px;
+    padding: 15px;
+    font-family: sans-serif;
+}
+.text{
+  color: white;
+    border-right: 2px solid red;
+    font-size: 55px;
+    font-family: sans-serif;
+    color: rgb(255, 30, 0);
+}
 .home-hero {
 
   margin: 0 auto; /* Center the div horizontally */
@@ -796,9 +808,9 @@
   justify-content: center;
   position: relative; 
   overflow: hidden;
-  
-  
 }
+
+
 .home-container03 {
   margin-top: 0px !important;
   background-position: center top; /* Center the background horizontally and position it at the top */
