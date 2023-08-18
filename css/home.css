@@ -1,4 +1,4 @@
-
+@import url(https://db.onlinewebfonts.com/c/07bf042b884e563aa8f7a9062bfc8834?family=Neutraface2Text-Bold);
 
 
 .primary-pink-button-container {
@@ -32,7 +32,7 @@
 
 .outline-gray-button-button {
   color: var(--dl-color-secondary-200);
-  outlinr: none;
+  outline: none;
   transition: all .15s ease-in;
   padding-top: var(--dl-space-space-triplequarterunit);
   border-color: var(--dl-color-secondary-200);
@@ -698,7 +698,7 @@
     flex-direction: column;
     justify-content: center;
 
-    filter: grayscale(100%); /* Add a grey filter to the images */
+    /* filter: grayscale(100%); Add a grey filter to the images */
 
     transition: filter 0.3s ease; /* Adding a transition for smooth effect */
     margin-left: 20px;
@@ -1123,7 +1123,37 @@
   color: #FFFFFF;
 
 }
+.home-text04 {
+  font-family: 'Neutraface2Text-Bold'!important;
+  font-size: 61px !important;;
+  line-height: 1.1;
+  font-weight: 600 !important;;
+  text-transform: capitalize !important;;
+  margin-bottom: 32px;
+  text-align: center;
+  color: #000000;
+}
 
+.home-text08{
+  font-family: 'Neutraface2Text-Bold'!important;
+  font-size: 30px !important;;
+  line-height: 1.1;
+  font-weight: 600 !important;;
+  text-transform: capitalize !important;;
+  margin-bottom: 32px;
+  text-align: center;
+  color: #353535;
+}
+.home-text4s {
+  font-family: 'Inter'!important;
+  font-size: 35px !important;;
+  font-weight: 800 !important;;
+  text-transform: capitalize !important;;
+  margin-bottom: 32px;
+  text-align: center;
+  color: #000000;
+
+}
 .calender{
   min-width:500px;
   width: 580px;
@@ -1196,12 +1226,7 @@
   position: absolute;
   object-fit: cover;
 }
-.home-text08{
 
-  color: white;
-  font-size: 3rem;
-  text-align: center;
-}
 
 .home-text07 {
   margin: 0 0 40px;
