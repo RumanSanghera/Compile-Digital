@@ -47,32 +47,43 @@
   transform: scale(1.02);
 }
 
-.feature-card1-feature-card {
+.feature-card-feature-card {
   width: 100%;
   display: flex;
-  padding: 32px;
-  align-items: center;
   flex-direction: column;
+  align-items: flex-start; 
+  text-align: left;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  background-color: #181818;
+  padding: 20px;
 }
-
-.feature-card1-image {
-  width: 100px;
+.feature-card-image {
+  width: 50px;
   object-fit: cover;
+  justify-content: left;
 }
 
-.feature-card1-text {
-  font-style: normal;
+.feature-card-text {
+  font-family: 'Inter'!important;
+  font-size: 24px;
+  line-height: 30px;
   margin-top: var(--dl-space-space-unit);
-  text-align: center;
-  font-weight: 500;
+  text-align: left;
+  font-weight: 700;
+  color: #FFFFFF;
   margin-bottom: var(--dl-space-space-unit);
 }
 
-.feature-card1-text1 {
-  color: var(--dl-color-gray-700);
-  text-align: center;
+.feature-card-text1 {
+  font-family: 'Inter'!important;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: left;
+  font-weight: 400;
+  color: #FFFFFF;
+  margin-bottom: var(--dl-space-space-unit);
 }
-
 
 .feature-card2-feature-card {
   width: 100%;
@@ -630,6 +641,76 @@
   background: linear-gradient(310deg, rgb(121, 40, 202), rgb(255, 0, 128));
 }
 
+/* Animation */
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-250px * 7))}
+}
+
+.test {
+  border: 1px solid transparent;
+}
+.home-hero{
+  border: 1px solid transparent;
+}
+/*  Styling  */
+#logos-home-page .slider {
+  height: auto;
+  margin: auto auto 43px auto;
+  overflow: hidden;
+  position: relative;
+  width: 50%;
+  bottom: 0;
+  /*background-color: #1d1d1d;*/
+ 
+}
+
+
+#logos-home-page .slider:before,#logos-home-page .slider:after {
+		background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+		content: "";
+		height: 100px;
+		position: absolute;
+		width: 500px;
+		z-index: 2;
+  
+	}
+	
+#logos-home-page .slider:after {
+		right: 0;
+		top: 0;
+		transform: rotateZ(180deg);
+	}
+
+#logos-home-page .slider:before {
+		left: 0;
+		top: 0;
+	}
+	#logos-home-page .slide-track {
+		animation: scroll 40s linear infinite;
+		display: flex;
+		width: calc(250px * 14);
+	}
+	
+#logos-home-page div.slide {
+    padding: 0 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    filter: grayscale(100%); /* Add a grey filter to the images */
+
+    transition: filter 0.3s ease; /* Adding a transition for smooth effect */
+    margin-left: 20px;
+    margin-right: 20px;
+
+
+}
+
+#logos-home-page div.slide:hover{
+  filter: grayscale(0%) !important;
+  cursor: pointer;
+}
 
 
 .home-active {
@@ -785,54 +866,72 @@
   height: 16px;
 }
 
-.iam{
-  color: white;
-    font-size: 55px;
-    padding: 15px;
-    font-family: sans-serif;
+
+#typed {
+  font-weight: bold;
+  color: #e83a00;
 }
-.text{
-  color: white;
-    border-right: 2px solid red;
-    font-size: 55px;
-    font-family: sans-serif;
-    color: rgb(255, 30, 0);
+.cursor {
+  display: inline-block;
+  background-color: #b0ff95;
+  animation: blinker 800ms infinite;
+}
+.cursor.typing-true {
+  animation: none;
+}
+
+@keyframes blinker {
+	0% { background-color: #000000; }
+	50% { background-color: transparent; }
+	100% { background-color: #000000; }
 }
 .home-hero {
-
-  margin: 0 auto; /* Center the div horizontally */
+  margin: 0 auto;
   width: 100%;
-  height: 100vh;
+  height: 80vh; /* Change this to 80vh */
   align-items: center;
   display: flex;
   justify-content: center;
-  position: relative; 
+  position: relative;
   overflow: hidden;
 }
 
-
 .home-container03 {
-  margin-top: 0px !important;
-  background-position: center top; /* Center the background horizontally and position it at the top */
-  width: 75%;
-  margin: 0 auto; /* Center the div horizontally */
+  background-position: center top 100px; /* Move background down by 100px */
+  width: 100%;
+  margin: 0 auto;
   background-repeat: no-repeat;
   background-image: url('../public/grid-light.svg');
-  max-width: 1320px;
-  min-height: 85vh;
+  max-width: 2300px;
+  min-height: 80vh;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative; /* Needed for absolute positioning of the balls */
+  justify-content: space-between;
+  height: 80vh;
+  position: relative; /* Add position relative to make the pseudo-element work */
+}
 
-  
-
+.home-container03::before {
+  content: ""; /* Create a pseudo-element */
+  display: block;
+  height: 100px; /* Height of the background shift */
+}
+.home-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: flex-start; /* Center vertically */
+  height: 100vh; /* Set an appropriate height */
+  width: 80%;
+  margin: 0 auto; /* Auto margin horizontally centers the div */
 }
 
 .home-text {
+  
   font-size: 75px;
-  margin-top: 50px;
+  margin-top: 150px;
   width: 60%;
   font-family: 'Outfit';
   font-weight: 700 !important;
@@ -850,6 +949,7 @@
   color: #777777!important;
   width: 60%;
   margin-top: 24px;
+  margin-bottom: 40px;
 }
 
 
@@ -950,17 +1050,25 @@
   object-position: right;
   border-bottom-left-radius: 10rem;
 }
+.test{
+  height: 100vh;
 
+}
 .home-features {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
-  max-width: 2500px;
   align-items: center;
   flex-direction: column;
   padding-bottom: 80px;
   padding-left: 10%;
   padding-right: 10%;
+
+  background-image: url(https://burstdgtl.com/wp-content/uploads/2023/03/Services-1.webp);
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .home-project-text {}
@@ -973,22 +1081,11 @@
 .feature-card3-feature-card,
 .feature-card4-feature-card {
   opacity: 0;
-  /* Set initial opacity to 0 */
   transform: translateY(50px);
-  /* Move the elements down initially */
   transition: opacity 3s, transform 3s;
-  /* Add transitions for smooth animation */
 }
 
 
-.feature-card1-feature-card,
-.feature-card2-feature-card,
-.feature-card3-feature-card,
-.feature-card4-feature-card {
-  background-color: #ffffff;
-  border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
-}
 
 .featureText.fade-in,
 .feature-card1-feature-card.fade-in,
@@ -996,16 +1093,18 @@
 .feature-card3-feature-card.fade-in,
 .feature-card4-feature-card.fade-in {
   opacity: 1;
-  /* Fade in by changing opacity to 1 */
   transform: translateY(0);
-  /* Reset the translation */
 }
 
 .featureText {
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 2s, transform 2s;
-  width: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Change the direction to column */
+  align-items: center; /* Center the items horizontally */
+  text-align: center; /* Center the text inside each item */
 }
 
 .featureText.fade-in {
@@ -1015,9 +1114,13 @@
 }
 
 .home-text03 {
-  font-size: 3rem;
+  font-family: 'Inter'!important;
+  font-size: 35px !important;;
+  font-weight: 800 !important;;
+  text-transform: capitalize !important;;
   margin-bottom: 32px;
   text-align: center;
+  color: #FFFFFF;
 
 }
 
@@ -1032,17 +1135,22 @@
 
 
 .home-text06 {
-  color: var(--dl-color-gray-700);
-  font-size: 1.15rem;
+  color: #d1d5db;
+  font-size: 20px;
+  font-family: inter !important;
+  font-weight: 400;
   text-align: center;
+  max-width: 1000px;
 }
 
 .home-container06 {
   width: 100%;
   display: grid;
-  grid-gap: 32px;
-  margin-top: var(--dl-space-space-fourunits);
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 12px;
+  margin-top: 20px;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 columns */
+  max-width: 1000px;
+
 }
 
 .home-contact {
@@ -1209,7 +1317,7 @@
 .home-button1 {
 
   color: var(--dl-color-gray-white);
-  width: 100%;
+  width: 200px;
   padding-top: 10px;
   padding-bottom: 10px;
   outline: none;
@@ -1218,9 +1326,10 @@
   text-align: center;
   transition: all .15s ease-in;
   border-width: 0px;
-  border-radius: 1.875rem;
   background-image: linear-gradient(310deg, rgb(121, 40, 202), rgb(255, 0, 128));
   transition: transform 0.3s ease;
+  font-family: 'Outfit'!important;
+  font-weight: 700;
 }
 
 .home-button1:hover {
@@ -1506,7 +1615,7 @@ input::placeholder {
     font-size: 2rem;
   }
 
-  .feature-card1-image {
+  .feature-card-image {
     width: 50px;
 
   }

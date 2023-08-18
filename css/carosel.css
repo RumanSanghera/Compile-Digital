@@ -1,16 +1,12 @@
-.test{
-    background-color: rgb(96, 13, 138);
-    height: 100vh;
-    
-}
+
 
 .micro-slider {
     height: 480px;
     /* margin: 10px 0; */
-    position: absolute;
+    position: relative;
 
     width: 100%;
-    margin-top: -347px;
+    
     bottom: 0; 
 }
 
