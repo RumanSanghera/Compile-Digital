@@ -30,16 +30,21 @@ html {
 }
 .container-contact100 {
     flex: 1; 
-    text-align: center;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .wrap-contact100 {
+    z-index: 2;
     width: 500px;
     background: #fff;
     border-radius: 10px;
     overflow: hidden;
     padding: 42px 55px 45px;
     max-height: 1200px;
+    
 }
 
 .contact100-form {

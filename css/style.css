@@ -40,6 +40,7 @@
   --dl-size-size-triplequarterunit: 0.75rem;
   --dl-space-space-unitandahalfunit: 1.5rem;
   --dl-space-space-triplequarterunit: 0.75rem;
+  --primary-color: #ac43c7ff;
 }
 
 html {
@@ -208,5 +209,60 @@ html {
   text-align: center;
 }
 
+.line1{
+  height: 100%;
+  left: 10%;
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  width: 1.5px;
+  background: rgba(0,0,0,.03);
+  z-index: 1;
+  pointer-events: none;
+}
+.line2{
+  height: 100%;
+  left: 30%;
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  width: 1.5px;
+  background: rgba(0,0,0,.03);
+  z-index: 1;
+  pointer-events: none;
+}
+.line3{
+  height: 100%;
+  left: 50%;
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  width: 1.5px;
+  background: rgba(0,0,0,.03);
+  z-index: 1;
+  pointer-events: none;
+}
+.line4{
+  height: 100%;
+  left: 70%;
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  width: 1.5px;
+  background: rgba(0,0,0,.03);
+  z-index: 1;
+  pointer-events: none;
+}
+.line5{
+  height: 100%;
+  left: 90%;
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  width: 1.5px;
+  background: rgba(0,0,0,.03);
+  z-index: 1;
+  pointer-events: none;
+}
 
 
