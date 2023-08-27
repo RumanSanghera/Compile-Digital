@@ -196,8 +196,9 @@ html {
 }
 .bookText{
   font-size: 75px;
-  margin-top: 150px;
-  width: 60%;
+  margin-top: 100px;
+  margin-bottom: 0px !important;
+  width: 100%;
   font-family: 'Outfit';
   font-weight: 700 !important;
   line-height: 1.3;
@@ -208,7 +209,32 @@ html {
   -webkit-text-fill-color: transparent;
   text-align: center;
 }
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: fixed; /* Use fixed position to cover the whole viewport */
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.5); /* Add a semi-transparent background */
+  z-index: 9999; /* Make sure the spinner is above other content */
+}
 
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #333; /* Color of the spinner */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite; /* Add a spinning animation */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 .line1{
   height: 100%;
   left: 10%;

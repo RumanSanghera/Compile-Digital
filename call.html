@@ -251,26 +251,32 @@
                 </div>
             </div>
         </div>
+
     </header>
 
     <div class="book">
-        
-           
-                <h1 class="bookText">Book A Call Today</h1>
+        <h1 class="bookText">Book A Call Today</h1>
 
-                <!-- Calendly inline widget begin -->
-                <div class="calendly-inline-widget"
-                    data-url="https://calendly.com/compiledigital/meeting?hide_gdpr_banner=1"
-                    style="min-width:320px;height:700px;"></div>
-                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"
-                    async></script>
-                <!-- Calendly inline widget end -->
+        <!-- Loading spinner element -->
+        <div class="loading-spinner">
+            <!-- You can use an image or an SVG here for the loading spinner -->
+            <img src="./public/Rainbow.gif" alt="Loading Spinner">
+        </div>
 
-
-
-
-        
+        <!-- Calendly inline widget begin -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/compiledigital/meeting?hide_gdpr_banner=1"
+            style="min-width:320px;height:700px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        <!-- Calendly inline widget end -->
     </div>
+
+    <script>
+        // Detect when the Calendly widget has finished loading
+        window.onload = function () {
+            // Hide the loading spinner once the page has fully loaded
+            document.querySelector('.loading-spinner').style.display = 'none';
+        };
+    </script>
 
 
     <footer class="footer-gray-footer footer-gray-root-class-name1">
@@ -324,7 +330,7 @@
                         <span class="footer-gray-text10 Large">
                             Help &amp; Support
                         </span>
-                        <a href="index.html#homecontact" class="footer-gray-text11 Large">Book A Call</a>
+                        <a href="#" class="footer-gray-text11 Large">Book A Call</a>
                     </div>
                 </div>
             </div>

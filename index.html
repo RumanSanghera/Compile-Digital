@@ -66,7 +66,7 @@
           Testimonials
         </a>
         <a href="faq.html" class="home-button button">FAQ</a>
-        <a href="#" onclick="scrollToDiv('homecontact')" class="home-button button">Book A Call</a>
+        <a href="call.html" class="home-button button">Book A Call</a>
       </nav>
     </div>
     <img alt="image" src="public/compilelogo-200h.png" class="home-image" id="image-link" />
@@ -74,6 +74,7 @@
 
 
     <script>
+     
 
       const header = document.querySelector('.home-header');
       let isHeaderAtTop = true;
@@ -89,7 +90,7 @@
       }
 
       window.addEventListener('scroll', updateHeaderState);
-
+ /*
 
       function scrollToDiv(divId) {
         const targetDiv = document.getElementById(divId);
@@ -113,14 +114,7 @@
         );
       }
 
-      function handleScroll2() {
-        const heroElement = document.getElementById('homecontact');
-        if (isElementInViewport(heroElement)) {
-          heroElement.classList.add('fade-in');
-          window.removeEventListener('scroll', handleScroll2); // Remove the event listener after animation
-        }
-      }
-
+     
       function handleScroll() {
 
         const featuresElement = document.getElementById('feature-text');
@@ -141,7 +135,6 @@
 
       }
       window.addEventListener('scroll', handleScroll);
-      window.addEventListener('scroll', handleScroll2);
 
       function isInViewport(el) {
         const rect = el.getBoundingClientRect();
@@ -180,7 +173,7 @@
 
 
 
-
+*/
 
 
     </script>
@@ -202,12 +195,13 @@
           <a href="#home" class="home-navlink1 home-active button">Home</a>
           <a href="testimonals.html" class="home-navlink1 button">Testimonials</a>
           <a href="faq.html" class="home-navlink1 button">FAQ</a>
-          <a href="#" onclick="scrollToDiv('homecontact')" class="home-navlink1 button">Book A Call</a>
+          <a href="call.html" class="home-navlink1 button">Book A Call</a>
         </div>
       </div>
     </div>
   </header>
 
+  <!-- 
 
   <div class="line1"></div>
   <div class="line2"></div>
@@ -215,7 +209,7 @@
   <div class="line4"></div>
   <div class="line5"></div>
   
-
+-->
   <div class="home-hero">
     <div id="home" class="home-container03">
       <div class="home-div">
@@ -334,6 +328,8 @@
     </div>
   </div>
 
+  <h1 class="home-text">Client Showcase</h1>
+
   <div class="micro-slider">
     <div class="slider-item s1" data-href="https://codepen.io/sukma-budi" data-target="_blank"></div>
     <div class="slider-item s2" data-href="https://github.com/lgse/micro-slider" data-target="_blank"></div>
@@ -341,13 +337,15 @@
   </div>
 
 
-  <section class="we-offer-area text-center bg-gray">
+  <section class="we-offer-area bg-gray"> <!-- text-center -->
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="site-heading text-center">
-                    <h2>What we <span>Offer</span></h2>
-                    <h4>Lorem Ipsum is simply dummy text</h4>
+                  <h1 class="home-text">Our Services</h1>
+
+                    <!-- <h2>What we <span>Offer</span></h2>
+                    <h4>Lorem Ipsum is simply dummy text</h4> -->
                 </div>
             </div>
         </div>
@@ -483,6 +481,7 @@
     </div>
   </div>
   -->
+  <h1 class="home-text">The Process...</h1>
 
   <section class="timeline">
     <ul>
@@ -549,8 +548,12 @@
 <script  src="./scripts/timeline.js"></script>
 
 
+  <!-- 
   <section class="home-contact" id="homecontact">
     <img loading="lazy" alt="image" src="public/waves-white.svg" class="home-image3" />
+  </section>
+-->
+<h1 class="home-text">Dont Want To Call?</h1>
 
     <div class="container-contact100" id="homecontact">
       <div class="wrap-contact100">
@@ -594,7 +597,7 @@
         </form>
       </div>
     </div>
-  </section>
+  
 
 
   <footer class="footer-gray-footer footer-gray-root-class-name1">
@@ -655,7 +658,7 @@
             <span class="footer-gray-text10 Large">
               Help &amp; Support
             </span>
-            <a href="index.html#homecontact" class="footer-gray-text11 Large">Book A Call</a>
+            <a href="call.html" class="footer-gray-text11 Large">Book A Call</a>
           </div>
         </div>
       </div>

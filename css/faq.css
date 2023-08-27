@@ -159,54 +159,86 @@
 
 
 
+.animated-details {
 
-.accordion {
-  background-color: rgb(255, 255, 255);
-  color: #000000;
-  cursor: pointer;
-  padding: 18px;
   width: 100%;
-  font-weight: 500;
-  text-align: left;
+  min-height: 5px;
+  max-width: 800px;
+  padding: 20px 35px 10px 35px;
+  margin: 0 auto;
+  position: relative;
   font-size: 15px;
-  transition: 0.2s;
-  flex-basis: 100%;
+  border-top: 1px solid rgba(0, 0, 0, .1);
+  min-height: 100px;
+  max-height: 100px; /* Set an initial max-height */
+  overflow: hidden; /* Hide overflow content */
+  transition: max-height 350ms ease-out;
+  box-sizing: border-box;
 }
 
-.accordion.active .accordion-symbol:after {
-  content: "-";
-  color: #ffffff;
-}
-.accordion.open {
-  background-image: linear-gradient(310deg, rgb(121, 40, 202), rgb(255, 0, 128));
-  color: #ffffff;
+.FAQpara {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  
 }
 
-.accordion .accordion-symbol:after {
-  content: "+";
-  font-size: 30px;
-  float: right;
-  margin-left: 5px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+.animated-details[open] {
+  
+  background-color: #fdfdfd;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, .2);
+  border-top: 0;
+  border-bottom: 0;
+  transition: max-height 1s ease-in-out;
+  max-height: 500px; 
+  min-height: 100px;
+}
+
+summary {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  background-image: linear-gradient(310deg, rgb(121, 40, 202), rgb(255, 0, 128));
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative; /* Added position relative */
+  transition: 1s ease;
+  color: #000000;
+  font-weight: 700;
+  text-align: left;
+  font-size: 24px;
+}
+details[open] summary {
+  color: #9513ff;
 }
 
-.accordion:hover {
-  background-color: #ccc;
+.control-icon {
+  fill: rebeccapurple;
+  transition: .3s ease;
+  pointer-events: none;
+  transform-origin: center; /* Added transform origin */
+  transition: .3s ease;
+
 }
 
-
-.accordion:active {
-  content: "-";
+.control-icon-close {
+  display: none;
 }
+
+.animated-details[open] .control-icon-close {
+  display: initial;
+  transform: rotate(0deg); /* Reset rotation when open */
+  transition: .3s ease;
+}
+
+.animated-details[open] .control-icon-expand {
+  display: none;
+}
+
+.animated-details[open] .control-icon-close {
+  transform: rotate(180deg); /* Rotate the close icon when open */
+  transition: .3s ease;
+}
+
 .faqContainer {
   padding-top: 10%;
   padding-left: 30px;
@@ -216,15 +248,15 @@
   flex-wrap: wrap;
 }
 
-.accordion-wrapper {
-  width: 60%;
-}
 .parent-section {
-  margin: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 5%;
+  margin-bottom: 3%;
+  
 }
 
 .inner-div {
@@ -232,6 +264,7 @@
   height: 100%;
   transform: translateY(-100%);
   animation: slideInLeft 0.8s ease-in-out forwards;
+  justify-content: center;
 }
 
 @keyframes slideInLeft {
@@ -247,12 +280,13 @@
   text-align: center;
   font-weight: 700;
   font-size: 3.75rem;
-  margin: 100px 0px 20px 0px;
-  color: #757575;
+  margin-bottom: 95px;
+  color: #000000;
   opacity: 0; /* Hide the element initially */
   transform: translateX(-100%); /* Move the element outside the viewport */
   animation: slide-in 0.5s forwards; 
   animation-delay: 1s; 
+  font-style: 'Outfit';
 
 }
 
@@ -267,28 +301,29 @@
   }
 }
 .faq-text02{
-  width: 50%;
   margin-top: 25px;
   margin-bottom: 25px;
+  color: #000000;
 }
 
-.left-div,
-.right-div {
-  flex-basis: 50%;
-  height: 100%;
+.faq-text01{
+ color: #000000;
+ margin-top: 20px;
 }
 
 .right-div {
+  background-image: url(https://d3f86pfw66amx.cloudfront.net/uncode/wp-content/uploads/2023/06/grid-light.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: initial;
+  background-color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-}
-
-.accordion-image {
-  width: 350px;
-  height: auto;
-  margin-bottom: 10px;
+  margin-top: 2%;  
+  height: 400px;
 }
 
 .right-content {
@@ -306,11 +341,7 @@
 }
 
 @media (max-width: 768px) {
-  .accordion-image {
-    margin-left: 0;
-    margin-top: 20px;
-    align-self: center;
-  }
+  
 }
 
 
@@ -340,11 +371,7 @@
   height: 100%;
 }
 
-.FAQpara {
-  width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
+
 
 
 .faq-container {
@@ -461,8 +488,11 @@
   width: auto;
   height: auto;
   display: flex;
-  align-items: space-between;
+  align-items: center;
   flex-direction: column;
+  margin-top: 170px;
+  height: auto;
+  min-height: 80vh;
 }
 
 .faq-burger-menu {

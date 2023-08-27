@@ -169,43 +169,6 @@
         };
     }
 
-    class Accordion {
-        init = () => {
-            this.getAccordionElementsAndAddEvents("type");
-            this.getAccordionElementsAndAddEvents("role");
-        };
-
-        getAccordionElementsAndAddEvents = (dataAttr) => {
-            const allAccordions = teleport.getAllElementsByDataAttribute(
-                "role",
-                "Accordion"
-            );
-
-            allAccordions.forEach((accordion) => {
-                const accordionHeader = teleport.getElByDataAttribute(
-                    dataAttr,
-                    "AccordionHeader",
-                    accordion
-                );
-                const accordionContent = teleport.getElByDataAttribute(
-                    dataAttr,
-                    "AccordionContent",
-                    accordion
-                );
-
-                if (!accordionHeader || !accordionContent) {
-                    return;
-                }
-
-                accordionHeader.addEventListener("click", () => {
-                    accordionContent.style.maxHeight
-                        ? (accordionContent.style.maxHeight = "")
-                        : (accordionContent.style.maxHeight = `${accordionContent.scrollHeight}px`);
-                });
-            });
-        };
-    }
-
     const listenForUrlChanges = () => {
         let url = location.href;
         document.body.addEventListener(
@@ -214,7 +177,6 @@
                 requestAnimationFrame(() => {
                     if (url !== location.href) {
                         new Menu().init();
-                        new Accordion().init();
                         url = location.href;
                     }
                 });
@@ -264,7 +226,6 @@
             return elements;
         },
         Menu,
-        Accordion,
     };
 
     const appDiv = document.getElementById("app");
@@ -272,15 +233,14 @@
     if (appDiv) {
         const observer = new MutationObserver(() => {
             new Menu().init();
-            new Accordion().init();
+            
             observer.disconnect();
             delete observer;
         });
         observer.observe(document.getElementById("app"), { childList: true });
     } else {
         new Menu().init();
-        new Accordion().init();
+        
     }
-
     listenForUrlChanges();
 })();

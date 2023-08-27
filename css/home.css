@@ -164,7 +164,7 @@
 
 .we-offer-area .item {
   background: #ffffff none repeat scroll 0 0;
-  border-left: 2px solid var(--primary-color);
+  /*border-left: 2px solid var(--primary-color);*/
   -moz-box-shadow: 0 0 10px #cccccc;
   -webkit-box-shadow: 0 0 10px #cccccc;
   -o-box-shadow: 0 0 10px #cccccc;
@@ -187,12 +187,12 @@
   -moz-border-radius: 50%;
   border-radius: 50%;
   color: #ffffff;
-  font-size: 40px;
-  height: 80px;
-  line-height: 80px;
+  font-size: 20px;
+  height: 40px;
+  line-height: 40px;
   position: relative;
   text-align: center;
-  width: 80px;
+  width: 40px;
   z-index: 1;
   transition: all 0.35s ease-in-out;
   -webkit-transition: all 0.35s ease-in-out;
@@ -201,6 +201,7 @@
   -o-transition: all 0.35s ease-in-out;
   margin-bottom: 25px;
 }
+/*
 
 .we-offer-area.text-center .item i::after {
   border: 2px solid var(--primary-color);
@@ -208,18 +209,18 @@
   -moz-border-radius: 50%;
   border-radius: 50%;
   content: "";
-  height: 90px;
+  height: 45px;
   left: -5px;
   position: absolute;
   top: -5px;
-  width: 90px;
+  width: 45px;
   z-index: -1;
   transition: all 0.35s ease-in-out;
   -webkit-transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
   -ms-transition: all 0.35s ease-in-out;
   -o-transition: all 0.35s ease-in-out;
-}
+}*/
 
 .we-offer-area.item-border-less .item {
   border: medium none;
@@ -256,7 +257,7 @@
 .we-offer-area .item i {
   color: var(--primary-color);
   display: inline-block;
-  font-size: 60px;
+  font-size: 30px;
   margin-bottom: 20px;
 }
 
@@ -1369,7 +1370,7 @@
   padding-right: 10%;
   height: 100vh;
   background-repeat: no-repeat;
-  background-color: #f6f7fa ;
+  background-color: #ffffff ;
   /*
   #ffe8ff;
   background-image: url(../public/img-hero-bg.svg);

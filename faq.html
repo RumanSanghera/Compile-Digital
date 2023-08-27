@@ -164,15 +164,15 @@
   </style>
   <link rel="stylesheet" href="./css/style.css" />
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FD9DPTZ2CP">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD9DPTZ2CP">
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-FD9DPTZ2CP');
-</script>
+    gtag('config', 'G-FD9DPTZ2CP');
+  </script>
 </head>
 
 <body>
@@ -196,12 +196,12 @@
             <a href="index.html" class="home-button button">Home</a>
             <a href="testimonals.html" class="home-button button">Testimonials</a>
             <a href="faq.html" class="home-button home-active button">FAQ</a>
-            <a href="index.html#homecontact" onclick="scrollToDiv('homecontact')" class="home-button2 button">Book A Call</a>
+            <a href="call.html" class="home-button2 button">Book A Call</a>
           </nav>
         </div>
-        <img alt="image" src="public/compilelogo-200h.png" class="home-image" id="image-link"/>
-    
-        
+        <img alt="image" src="public/compilelogo-200h.png" class="home-image" id="image-link" />
+
+
 
         <script>
           function scrollToDiv(divId) {
@@ -214,7 +214,7 @@
           }
 
           const imageLink = document.getElementById('image-link');
-          imageLink.addEventListener('click', function() {
+          imageLink.addEventListener('click', function () {
             window.location.href = '#home'; // Replace with the desired URL or action
           });
         </script>
@@ -236,88 +236,154 @@
               <a href="index.html" class="home-navlink1 button">Home</a>
               <a href="testimonals.html" class="home-navlink1 button">Testimonials</a>
               <a href="faq.html" class="home-navlink1 home-active button">FAQ</a>
-              <a href="index.html#homecontact" onclick="scrollToDiv('homecontact')" class="home-navlink2 button">Book A Call</a>
+              <a href="call.html" class="home-navlink2 button">Book A Call</a>
             </div>
           </div>
         </div>
       </header>
 
-
-
-      <div class="parent-section">
+      <div class="faq-container1">
         <h2 class="title-text">Frequently Asked Questions</h2>
-        <div class="inner-div">
-          <div class="left-div">
 
-            <!-- Content for left div -->
-            <div class="accordion-items">
-              <button class="accordion">
-                How long does it take to build a website?
-                <span class="accordion-symbol"></span>
-              </button>
-              <div class="panel">
-                <p class="FAQpara">The timeline for website development varies depending on the complexity and specific
-                  requirements of each project. However, we strive to deliver efficient and timely results. We will
-                  provide you with a clear estimate of the project timeline during our initial consultation.</p>
-              </div>
-              <button class="accordion">
-                Can I update and manage the content on my website?
-                <span class="accordion-symbol"></span>
-              </button>
-              <div class="panel">
-                <p class="FAQpara">Absolutely! We design and develop websites using a user-friendly content management
-                  system (CMS), allowing you to easily update and manage your website's content without any coding
-                  knowledge.</p>
-              </div>
-              <button class="accordion">
-                Will my website be mobile-friendly and responsive?
-                <span class="accordion-symbol"></span>
-              </button>
-              <div class="panel">
-                <p class="FAQpara">Yes! We ensure that all websites we design and develop are fully optimized to provide
-                  a seamless user experience across various devices, including smartphones, tablets, and desktops.</p>
-              </div>
-              <button class="accordion">
-                Do you provide website hosting and domain registration?
-                <span class="accordion-symbol"></span>
-              </button>
-              <div class="panel">
-                <p class="FAQpara">While we primarily specialize in website design and development, we can assist you in
-                  choosing a reliable hosting provider and guide you through the domain registration process.</p>
-              </div>
-              <button class="accordion">
-                Can you optimize my website for search engines (SEO)?
-                <span class="accordion-symbol"></span>
-              </button>
-              <div class="panel">
-                <p class="FAQpara">Yes! We follow SEO best practices during the website development process to ensure
-                  that your website is structured and optimized for search engines. We can also provide ongoing SEO
-                  services to help improve your website's visibility in search engine rankings.</p>
-              </div>
-              <button class="accordion">
-                How do I get started with the website design process?
-                <span class="accordion-symbol"></span>
-              </button>
-              <div class="lastpanel">
-                <p class="FAQpara">Getting started is simple! Reach out to us through our contact page or by using the
-                  provided contact information. We will schedule a consultation to discuss your project in detail,
-                  including your goals, budget, and timeline. From there, we will work closely with you to bring your
-                  vision to life.</p>
-              </div>
-            </div>
-
-          </div>
-          <div class="right-div">
-            <img src="public/FAQ.png" alt="FAQ" class="accordion-image">
-            <p class="faq-text02">Cant Find The Answer Your After? Book A Call Using Our Online Form And We'll Get Back
-              To You Within 24 Hours</p>
-            <a href="index.html#homecontact" onclick="scrollToDiv('homecontact')" class="primary-pink-button-button button ButtonSmall">Book A Call</a>
-
-          </div>
-
+        <div style="visibility: hidden; position: absolute; width: 0px; height: 0px;">
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol viewBox="0 0 24 24" id="expand-more">
+              <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
+              <path d="M0 0h24v24H0z" fill="none" />
+            </symbol>
+            <symbol viewBox="0 0 24 24" id="close">
+              <path
+                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+              <path d="M0 0h24v24H0z" fill="none" />
+            </symbol>
+          </svg>
         </div>
+
+        <details class="animated-details">
+          <summary>
+            How Much Does it Cost to Build a Website?
+            <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" />
+            </svg>
+            <svg class="control-icon control-icon-close" width="24" height="24" role="presentation">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" />
+            </svg>
+          </summary>
+          <p class="FAQpara">We aim to keep costs low by optimising the process and completing most of the process in
+            house as we are a passionate team of developmers and desiners doing this in our sparetime. some costs such
+            as tools, hosting and more are what you are paying for and we aim NOT to inflate the cost of the serive</p>
+        </details>
+
+        <details class="animated-details">
+          <summary>
+            How long does it take to build a website?
+            <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" />
+            </svg>
+            <svg class="control-icon control-icon-close" width="24" height="24" role="presentation">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" />
+            </svg>
+          </summary>
+          <p class="FAQpara">The timeline for website development varies depending on the complexity and specific
+            requirements of each project. However, we strive to deliver efficient and timely results. We will
+            provide you with a clear estimate of the project timeline during our initial consultation.
+          </p>
+        </details>
+
+        <details class="animated-details">
+
+          <summary>
+            Can I update and manage the content on my website?
+            <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" />
+            </svg>
+            <svg class="control-icon control-icon-close" width="24" height="24" role="presentation">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" />
+            </svg>
+          </summary>
+          <p class="FAQpara">Absolutely! Depening on what your requirments are we can intergrate a user-friendly content
+            management
+            system (CMS), allowing you to easily update and manage your website's content without any coding
+            knowledge.</p>
+        </details>
+
+        <details class="animated-details">
+          <summary>
+            Do you provide website hosting and domain registration?
+            <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" />
+            </svg>
+            <svg class="control-icon control-icon-close" width="24" height="24" role="presentation">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" />
+            </svg>
+          </summary>
+          <p class="FAQpara">Not to worry! Unlike most services we take care of the entire process by using third party
+            trusted domain hosting services which we pre pay for a specified amount of time </p>
+        </details>
+
+
+        <details class="animated-details">
+          <summary>
+            Can you optimize my website for search engines (SEO)?
+            <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" />
+            </svg>
+            <svg class="control-icon control-icon-close" width="24" height="24" role="presentation">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" />
+            </svg>
+          </summary>
+          <p class="FAQpara">Yes! We follow SEO best practices during the website development process to ensure
+            that your website is structured and optimized for search engines. We can also provide ongoing SEO
+            services to help improve your website's visibility in search engine rankings.</p>
+        </details>
+
+        <details class="animated-details">
+          <summary>
+            How do I get started with the website design process?
+            <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" />
+            </svg>
+            <svg class="control-icon control-icon-close" width="24" height="24" role="presentation">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" />
+            </svg>
+          </summary>
+          <div>
+            <p class="FAQpara">Getting started is simple! Reach out to us through our contact page or by using the
+              provided contact information. We will schedule a consultation to discuss your project in detail,
+              including your goals, budget, and timeline. From there, we will work closely with you to bring your
+              vision to life.</p>
+          </div>
+        </details>
+
       </div>
 
+      <script>
+        const detailsElements = document.querySelectorAll('.animated-details');
+
+        detailsElements.forEach(details => {
+          details.addEventListener('toggle', () => {
+            if (details.open) {
+              // Close all other details elements
+              detailsElements.forEach(otherDetails => {
+                if (otherDetails !== details && otherDetails.open) {
+                  otherDetails.open = false;
+                }
+              });
+              console.log(details.scrollHeight + 'px'+ "open?");
+              details.style.height = details.scrollHeight + 'px';
+            } else {
+              console.log(getComputedStyle(details).getPropertyValue('min-height') + "close?");
+              //details.style.maxHeight = getComputedStyle(details).getPropertyValue('min-height');
+            }
+          });
+        });
+      </script>
+
+      <div class="right-div">
+        <h2 class="faq-text01">Cant Find The Answer ?</h2>
+        <p class="faq-text02"> Book A Call Using Our Online Form And We'll answer any questions you have!</p>
+        <a href="call.html" class="primary-pink-button-button button ButtonSmall">Book A Call</a>
+      </div>
 
       <footer class="footer-gray-footer footer-gray-root-class-name1">
         <div class="footer-gray-divider"></div>
@@ -377,7 +443,7 @@
                 <span class="footer-gray-text10 Large">
                   Help &amp; Support
                 </span>
-                <a href="./index.html#homecontact" class="footer-gray-text11 Large">Book A Call</a>
+                <a href="call.html" class="footer-gray-text11 Large">Book A Call</a>
               </div>
             </div>
           </div>
@@ -390,30 +456,7 @@
   </div>
   <script src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
   <script data-section-id="header" src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
-  <script>
-    var acc = document.getElementsByClassName("accordion");
-    var i;
-  
-    for (i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-          panel.style.maxHeight = null;
-          this.style.backgroundImage = "linear-gradient(310deg, rgb(255, 255, 255), rgb(255, 255, 255))"
-          this.style.color = "#000000";
-          var symbol = this.querySelector(".accordion-symbol::after");
-          symbol.style.content = "'+'";
-        } else {
-          panel.style.maxHeight = panel.scrollHeight + "px";
-          this.style.backgroundImage = "linear-gradient(310deg, rgb(121, 40, 202), rgb(255, 0, 128))";
-          this.style.color = "#ffffff";
-          var symbol = this.querySelector(".accordion-symbol::after");
-          symbol.style.content = "'-'";
-        }
-      });
-    }
-  </script>
+
 </body>
 
 </html>
