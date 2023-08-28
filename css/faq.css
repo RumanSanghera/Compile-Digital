@@ -53,7 +53,7 @@
 .footer-gray-text {
   font-weight: 700;
   margin-bottom: var(--dl-space-space-unit);
-  background-image: linear-gradient(310deg, rgb(121, 40, 202), rgb(255, 0, 128));
+  background-image: var(--linear-grad);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -114,7 +114,7 @@
 .footer-gray-text02 {
   font-weight: 600;
   margin-bottom: var(--dl-space-space-halfunit);
-  background-image: linear-gradient(310deg, rgb(121, 40, 202), rgb(255, 0, 128));
+  background-image: var(--linear-grad);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -142,7 +142,7 @@
 .footer-gray-text10 {
   font-weight: 600;
   margin-bottom: var(--dl-space-space-halfunit);
-  background-image: linear-gradient(310deg, #7928ca, #ff0080);
+  background-image: var(--linear-grad);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -208,11 +208,15 @@ summary {
   font-size: 24px;
 }
 details[open] summary {
-  color: #9513ff;
+  background: var(--linear-grad);
+  background-clip: text;
+  -webkit-background-clip: text; /* For Safari support */
+  color: transparent;
+
 }
 
 .control-icon {
-  fill: rebeccapurple;
+  fill: var(--linear-grad);
   transition: .3s ease;
   pointer-events: none;
   transform-origin: center; /* Added transform origin */

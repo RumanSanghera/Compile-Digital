@@ -1,18 +1,12 @@
-
-
 .micro-slider {
     height: 480px;
-    /* margin: 10px 0; */
     position: relative;
-
     width: 100%;
-    
-    bottom: 0; 
+    bottom: 0;
 }
 
 .micro-slider.fullwidth {
     height: 480px;
-    /* margin: 64px 0; */
 }
 
 .micro-slider.fullwidth .slider-item {
@@ -25,29 +19,33 @@
     overflow: hidden;
     position: relative;
     transform-style: preserve-3d;
-    transform-origin: 0 50%;
+    transform-origin: 0 10%;
 }
 
 .slider-item {
-    background: #FFF;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, .06), 0 1px 2px rgba(0, 0, 0, .12);
-    color: #FFF;
+    background: #ffffff00;
+    /*box-shadow: 0 1px 3px rgba(0, 0, 0, .06), 0 1px 2px rgba(0, 0, 0, .12);*/
+    color: #ffffff00;
     display: none;
     font-size: 72px;
-    height: 400px;
     line-height: 320px;
     left: 0;
     position: absolute;
     text-align: center;
     top: 0;
-    width: 800px;
     cursor: pointer;
-    border-radius: 20px;
+    border-radius: 0px;
+    height: 400px;
+    width: 800px;
 }
+.slider-item.active {
+    font-size: 72px;
+    line-height: 320px;
+    transform: translateX(0); /* Keep the active item centered */
+    height: 600px;
+    width: 900px;
 
-/*
-.slider-item:not(.active) {cursor: pointer;}
-*/
+}
 .indicators {
     bottom: 0px;
     left: 50%;
@@ -85,17 +83,18 @@
 }
 
 .s1 {
-    background: url(../public/flexntone.PNG);
+    background: url(../public/OT130I1.png);
     background-size: cover;
 
 }
+
 .s2 {
-    background: url(../public/jacob.png);
+    background: url(../public/OT12YY1.png);
     background-size: cover;
 }
 
 .s3 {
-    background: url(../public/owenmasseyfilms.PNG);
+    background: url(../public/perspective-website-mockup-free-800x526px.png);
     background-size: cover;
 }
 
