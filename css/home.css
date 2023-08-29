@@ -2,6 +2,25 @@
 body {
   background-color: var(--body)
 }
+.home-text-p{
+  font-family: 'Inter'!important;
+  font-size: 14.5px !important;
+  font-weight: 300 !important;
+  text-transform: capitalize !important;
+  color: #0c0c0c;
+
+}
+.home-text-heading{
+
+    font-family: 'Outfit';
+    font-weight: 600;
+    text-transform: capitalize;
+    color: inherit;
+    font-size: 24px;
+    text-align: left;
+
+}
+
 .home-text03 {
   font-family: 'Inter'!important;
   font-size: 35px !important;;
@@ -125,66 +144,29 @@ body {
   margin-top: -5px;
 }
 
-.heart_container {
-  width: 450px;
-  height: 450px;
-  position: absolute; 
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border: 4px solid #FCD8E8;
-  border-radius: 50%;
-  background: #F5C0D7;
-  overflow: hidden;
+.checkmark{
+  display: inline-block;
 }
-
-.heart {
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  background-color: #F1273F;
-  margin: auto;
-  top: 30px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  transform: rotate(-45deg);
-  animation-name: beat;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
+.checkmark-check {
+  stroke-dasharray: 80px 80px;
+  stroke-dashoffset: -80px;
+  -webkit-animation: checkAnimate 1s forwards cubic-bezier(0.895, 0.03, 0.685, 0.22);
+          animation: checkAnimate 1s forwards cubic-bezier(0.895, 0.03, 0.685, 0.22);
 }
-
-.heart::after {
-  position: absolute;
-  background-color: #F1273F;
-  content: '';
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  top: 0px;
-  left: 70px;
-}
-
-.heart::before {
-  position: absolute;
-  background-color: #F1273F;
-  content: '';
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  top: -70px;
-  left: 0px;
-}
-
-@keyframes beat {
+@-webkit-keyframes checkAnimate {
   0% {
-    transform: scale(1) rotate(-45deg);
+    stroke-dashoffset: -80px;
   }
-  50% {
-    transform: scale(0.8) rotate(-45deg);
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+@keyframes checkAnimate {
+  0% {
+    stroke-dashoffset: -80px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
   }
 }
 
@@ -1068,28 +1050,26 @@ body {
     
   }
 
-
-.home-active {
-  background: var(--linear-grad);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 750 !important;
-  -webkit-text-stroke-width: 0px !important;
-  -webkit-text-stroke-color: transparent !important;
-  text-decoration:underline !important;
-  text-decoration: none;
-  position: relative;
-}
-
-.home-active::after {
-  content: ""; /* Create a pseudo-element for the underline */
-  display: block; /* Make it a block element to control its dimensions */
-  border-bottom: 2px solid rgb(59, 59, 59); /* Customize the underline color and thickness */
-  width: 100%; /* Adjust the width of the underline relative to the text width */
-  position: absolute; /* Position the underline relative to the text */
-  bottom: -5px; /* Adjust the spacing between text and underline */
-  left: 0%; /* Adjust the positioning of the underline */
-}
+  .home-active {
+    font-weight: 750 !important;
+    -webkit-text-stroke-width: 0px !important;
+    -webkit-text-stroke-color: transparent !important;
+    text-decoration: none; /* Remove text-decoration here */
+    position: relative; /* Add this line */
+  }
+  
+  .home-active::after {
+    content: ""; /* Create a pseudo-element for the underline */
+    display: block; /* Make it a block element to control its dimensions */
+    width: 100%; /* Adjust the width of the underline relative to the text width */
+    height: 2px; /* Set the height of the underline */
+    background-image: var(--linear-grad); /* Apply the linear gradient as the background image */
+    background-size: 100% 100%; /* Adjust the background size to cover the entire height */
+    position: absolute; /* Position the underline relative to the text */
+    bottom: -5px; /* Adjust the spacing between text and underline */
+    left: 0%; /* Adjust the positioning of the underline */
+    content: "";
+  }
 
 
 .home-button {
@@ -1101,9 +1081,18 @@ body {
   background-color: transparent;
   color: #474747;
   font-family: 'Outfit';
-  
-
 }
+.home-button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  background: var(--linear-grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 750 !important;
+  -webkit-text-stroke-width: 0px !important;
+  -webkit-text-stroke-color: transparent !important;
+}
+
 .home-button2 {
   font-style: normal;
   font-weight: 600;
@@ -1306,8 +1295,9 @@ body {
   font-weight: 600 !important;
   color: #777777!important;
   width: 60%;
-  margin-top: 24px;
-  margin-bottom: 40px;
+  margin-top: 0px;
+  margin-bottom: 35px;
+  font-size: 20px;
 }
 .home-subheading07{
   width: 90%;
@@ -1420,14 +1410,18 @@ body {
     column-gap: 50px;
     border-collapse: collapse;
     width: 50%;
+    margin-top: 50px;
 
 }
 .home-item {
   border-top: 1px solid #000d10;
-  padding-top: 1.5625vw;
-  padding-bottom: 4.6875vw;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
 }
-
+.home-item-nested{
+  padding-left: 20px;
+}
 
 /* Remove border from the top of the first row */
 

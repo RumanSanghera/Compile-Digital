@@ -69,7 +69,7 @@
 }
 
 .indicators a {
-    background: #FFF;
+    background: #bcbcbc;
     border-radius: 8px;
     border: 1px solid #E6E9EC;
     color: #FFF;
@@ -79,7 +79,7 @@
 }
 
 .indicators .active a {
-    background: #E6E9EC;
+    background: var(--linear-grad);
 }
 
 .s1 {
