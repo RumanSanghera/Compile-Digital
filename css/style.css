@@ -40,12 +40,40 @@
   --dl-size-size-triplequarterunit: 0.75rem;
   --dl-space-space-unitandahalfunit: 1.5rem;
   --dl-space-space-triplequarterunit: 0.75rem;
+  --primary-color: #ac43c7ff;
+  --linear-grad: linear-gradient(310deg, rgb(121, 40, 202), rgb(255, 0, 128));
+  --body: rgb(251, 251, 251);
+}
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden; 
+}
+.Cursor {
+  pointer-events: "none";
+  position: "fixed";
+  display: "block";
+  border-radius: "0";
+  transform-origin: "center center";
+  mix-blend-mode: "difference";
+  top: "0";
+  left: "0";
+  z-index: "9999999999999999";
 }
 
+.Cursor span {
+  position: absolute;
+  display: block;
+  width: 26px;
+  height: 26px;
+  border-radius: 20px;
+  background-color: #fff;
+  transform-origin: center center;
+  transform: translate(-50%, -50%);
+}
 .button {
   color: #000000;
   display: inline-block;
-  padding: 0.5rem 1rem;
+  margin: 0.5rem 1rem;
   font-family: Open Sans;
   border-color: var(--dl-color-secondary-400);
   border-width: 1px;
@@ -182,7 +210,109 @@
   letter-spacing: -0.025rem;
   text-transform: uppercase;
 }
+.book{
+  
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh; /* Change this to 80vh */
+    position: relative;
+  
+}
+.bookText{
+  font-size: 75px;
+  margin-top: 100px;
+  margin-bottom: 0px !important;
+  width: 100%;
+  font-family: 'Outfit';
+  font-weight: 700 !important;
+  line-height: 1.3;
+  text-transform: none;
+  text-decoration: none;
+  background-image: var(--linear-grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: fixed; /* Use fixed position to cover the whole viewport */
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.5); /* Add a semi-transparent background */
+  z-index: 9999; /* Make sure the spinner is above other content */
+}
 
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #333; /* Color of the spinner */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite; /* Add a spinning animation */
+}
 
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.line1{
+  height: 100%;
+  left: 10%;
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  width: 1.5px;
+  background: rgba(0,0,0,.03);
+  z-index: 1;
+  pointer-events: none;
+}
+.line2{
+  height: 100%;
+  left: 30%;
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  width: 1.5px;
+  background: rgba(0,0,0,.03);
+  z-index: 1;
+  pointer-events: none;
+}
+.line3{
+  height: 100%;
+  left: 50%;
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  width: 1.5px;
+  background: rgba(0,0,0,.03);
+  z-index: 1;
+  pointer-events: none;
+}
+.line4{
+  height: 100%;
+  left: 70%;
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  width: 1.5px;
+  background: rgba(0,0,0,.03);
+  z-index: 1;
+  pointer-events: none;
+}
+.line5{
+  height: 100%;
+  left: 90%;
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  width: 1.5px;
+  background: rgba(0,0,0,.03);
+  z-index: 1;
+  pointer-events: none;
+}
 
 
