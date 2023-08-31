@@ -44,9 +44,20 @@
   --linear-grad: linear-gradient(310deg, rgb(121, 40, 202), rgb(255, 0, 128));
   --body: rgb(251, 251, 251);
 }
+*{
+ 
+  
+  /*
+   max-width: 100vw;
+  PROBLEM AREAS CAUSING OVERFLOW:
+
+    Home Hero Section (start over)
+    Our Process Section
+  */
+  }
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden; 
+  
 }
 .Cursor {
   pointer-events: "none";

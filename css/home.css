@@ -1487,14 +1487,14 @@ body {
   overflow: hidden;
 }
 .home-div{
-  margin-top: 150px !important;
   display: flex;
   flex-direction: column;
   align-items: center; /* Center horizontally */
   justify-content: flex-start; /* Center vertically */
-  height: 100vh; /* Set an appropriate height */
+  height: 100%; /* Set the height to 100% */
   width: 100%;
   margin: 0 auto; /* Auto margin horizontally centers the div */
+  margin-top: 200px;
 }
 
 .home-container03 {
@@ -1504,20 +1504,14 @@ body {
   background-repeat: no-repeat;
   background-image: url('../public/grid-light.svg');
   max-width: 2300px;
-  min-height: 80vh;
+  min-height: 100vh; /* Change min-height to 100vh */
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  height: 90vh;
-  position: relative; /* Add position relative to make the pseudo-element work */
-}
-
-.home-container03::before {
-  content: ""; /* Create a pseudo-element */
-  display: block;
-  height: 100px; /* Height of the background shift */
+  justify-content: flex-start; /* Center content vertically */
+  position: relative;
+  overflow: hidden; /* Add overflow hidden to prevent content from overflowing */
 }
 .home-container04 {
   margin: 0 auto;
@@ -2306,6 +2300,9 @@ input::placeholder {
   .feature-card4-feature-card {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
   }
+  .footer-top-inner{
+    width: 80%;
+  }
 
 }
 
@@ -2313,6 +2310,9 @@ input::placeholder {
   .calender{
     width: 400px;
     min-width: 400px;
+  }
+  .home-div{
+    margin-top: 125px;
   }
   
 }
@@ -2347,7 +2347,7 @@ input::placeholder {
   }
 
   .home-container05 {
-    margin-right: 0px;
+    margin-top: 200px;
     margin-bottom: var(--dl-space-space-unit);
   }
 
