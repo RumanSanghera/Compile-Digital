@@ -14,7 +14,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
-
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Outfit' rel='stylesheet'>
     <style data-tag="reset-style-sheet">
         html {
             line-height: 1.15;
@@ -126,7 +128,6 @@
         }
     </style>
     <link rel="shortcut icon" href="public/favicon.ico" type="icon/png" sizes="32x32" />
-    <link rel="stylesheet" type="text/css" href="./css/contact.css">
 
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&amp;display=swap"
@@ -179,7 +180,7 @@
 <body>
 
     <link href="./css/home.css" rel="stylesheet" />
-    <link href="./css/testimonals.css" rel="stylesheet" />
+    
 
     <div class="testimonals-container">
 
@@ -193,33 +194,39 @@
                     </svg>
                 </div>
             </div>
+            <img alt="image" src="public/compilelogo-200h.png" class="home-image" id="image-link" />
+
             <div class="home-nav">
                 <nav class="home-nav1">
                     <a href="index.html" class="home-button button">Home</a>
-                    <a href="testimonals.html" class="home-button home-active button">Testimonials</a>
+                    <a href="#" class="home-active home-button button"> Testimonials</a>
                     <a href="faq.html" class="home-button button">FAQ</a>
-                    <a href="call.html" class="home-button2 button">Book A Call</a>
+                    <a href="call.html" class="home-button button">Book A Call</a>
                 </nav>
             </div>
-            <img alt="image" src="public/compilelogo-200h.png" class="home-image" id="image-link" />
 
 
 
             <script>
-                function scrollToDiv(divId) {
-                    const targetDiv = document.getElementById(divId);
-                    const scrollPosition = targetDiv.offsetTop - (window.innerHeight / 2) + (targetDiv.offsetHeight / 2);
-                    window.scrollTo({
-                        top: scrollPosition,
-                        behavior: 'smooth'
-                    });
+
+
+                const header = document.querySelector('.home-header');
+                let isHeaderAtTop = true;
+
+                function updateHeaderState() {
+                    if (window.scrollY > 0 && isHeaderAtTop) {
+                        header.classList.add('header-shadow');
+                        isHeaderAtTop = false;
+                    } else if (window.scrollY === 0 && !isHeaderAtTop) {
+                        header.classList.remove('header-shadow');
+                        isHeaderAtTop = true;
+                    }
                 }
 
-                const imageLink = document.getElementById('image-link');
-                imageLink.addEventListener('click', function () {
-                    window.location.href = '#home'; // Replace with the desired URL or action
-                });
+                window.addEventListener('scroll', updateHeaderState);
+
             </script>
+
 
             <div data-role="MobileMenu" class="home-mobile-menu">
                 <div class="home-nav2">
@@ -236,11 +243,9 @@
                     </div>
                     <div class="home-nav3">
                         <a href="index.html" class="home-navlink1 button">Home</a>
-                        <a href="testimonals.html" class="home-navlink1 home-active button">Testimonials</a>
+                        <a href="#" class="home-navlink1 home-active button">Testimonials</a>
                         <a href="faq.html" class="home-navlink1 button">FAQ</a>
-                        <a href="index.html#homecontact" onclick="scrollToDiv('homecontact')"
-                            class="home-navlink1 button">Contact
-                            Us</a>
+                        <a href="call.html" class="home-navlink1 button">Book A Call</a>
                     </div>
                 </div>
             </div>
@@ -249,7 +254,7 @@
         <div class="testimonals-testimonial">
 
             <div class="testimonals-container3">
-                <h1 class="testimonals-text">Clients we've worked with</h1>
+                <h1 class="home-text">Clients we've worked with</h1>
                 <p class="testimonals-text03">
                     Welcome to our portfolio, where we showcase an array of exceptional clients we've worked with. Our
                     passion for
@@ -268,7 +273,7 @@
                             <div class="btn-square">
                                 <img alt="image" src="public/jacobProf.png" class="round-icon" />
                             </div>
-                            <p class="testimonals-text05"> I'm thrilled with Compile Digital's website design for my
+                            <p class="home-text-p testimonals-text05"> I'm thrilled with Compile Digital's website design for my
                                 tutoring
                                 platform. They flawlessly transformed my vision into a user-friendly website with a
                                 modern layout that
@@ -298,7 +303,7 @@
                             <div class="btn-square">
                                 <img alt="image" src="public/owen.jpeg" class="round-icon" />
                             </div>
-                            <p class="testimonals-text05"> I was extremely satisfied with the services provided by
+                            <p class="home-text-p testimonals-text05"> I was extremely satisfied with the services provided by
                                 Complile Digital.
                                 They not only allowed me to
                                 fully customize my website according to my specific needs but also accommodated
@@ -321,7 +326,7 @@
                             <div class="btn-square">
                                 <img alt="image" src="public/flexntoneProf.png" class="round-icon" />
                             </div>
-                            <p class="testimonals-text05">
+                            <p class="home-text-p testimonals-text05">
                                 I had a great experience working with Compile Digital. They exceeded my expectations in
                                 every way.
                                 They created a stunning website for my business at a cost-effective price. The

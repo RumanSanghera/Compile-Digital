@@ -1,5 +1,7 @@
 var timelineItems = document.querySelectorAll(".timeline li");
 var offerItems = document.querySelectorAll(".our-offer-items .item");
+var homeItems = document.querySelectorAll(".home-item"); // Add this line
+
 
 function isElementInViewport(el) {
   var rect = el.getBoundingClientRect();
@@ -31,6 +33,16 @@ function callbackFunc() {
       }
     } else if (offerItems[i].classList.contains("in-view")) {
       offerItems[i].classList.remove("in-view");
+    }
+  }
+  
+  for (var i = 0; i < homeItems.length; i++) {
+    if (isElementInViewport(homeItems[i])) {
+      if (!homeItems[i].classList.contains("in-view")) {
+        homeItems[i].classList.add("in-view");
+      }
+    } else if (homeItems[i].classList.contains("in-view")) {
+      homeItems[i].classList.remove("in-view");
     }
   }
 }

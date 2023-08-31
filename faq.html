@@ -13,7 +13,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta charset="utf-8" />
   <meta property="twitter:card" content="summary_large_image" />
-
+  <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Outfit' rel='stylesheet'>
   <style data-tag="reset-style-sheet">
     html {
       line-height: 1.15;
@@ -125,7 +127,7 @@
     }
   </style>
   <link rel="shortcut icon" href="public/favicon.ico" type="icon/png" sizes="32x32" />
-  <link rel="stylesheet" type="text/css" href="css/contact.css">
+  
 
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&amp;display=swap"
@@ -191,33 +193,39 @@
             </svg>
           </div>
         </div>
+        <img alt="image" src="public/compilelogo-200h.png" class="home-image" id="image-link" />
+
         <div class="home-nav">
           <nav class="home-nav1">
-            <a href="index.html" class="home-button button">Home</a>
-            <a href="testimonals.html" class="home-button button">Testimonials</a>
-            <a href="faq.html" class="home-button home-active button">FAQ</a>
-            <a href="call.html" class="home-button2 button">Book A Call</a>
+            <a href="#home" class="home-button home-button button">Home</a>
+            <a href="testimonals.html" class="home-button button"> Testimonials</a>
+            <a href="faq.html" class="home-active home-button button">FAQ</a>
+            <a href="call.html" class="home-button button">Book A Call</a>
           </nav>
         </div>
-        <img alt="image" src="public/compilelogo-200h.png" class="home-image" id="image-link" />
 
 
 
         <script>
-          function scrollToDiv(divId) {
-            const targetDiv = document.getElementById(divId);
-            const scrollPosition = targetDiv.offsetTop - (window.innerHeight / 2) + (targetDiv.offsetHeight / 2);
-            window.scrollTo({
-              top: scrollPosition,
-              behavior: 'smooth'
-            });
+
+
+          const header = document.querySelector('.home-header');
+          let isHeaderAtTop = true;
+
+          function updateHeaderState() {
+            if (window.scrollY > 0 && isHeaderAtTop) {
+              header.classList.add('header-shadow');
+              isHeaderAtTop = false;
+            } else if (window.scrollY === 0 && !isHeaderAtTop) {
+              header.classList.remove('header-shadow');
+              isHeaderAtTop = true;
+            }
           }
 
-          const imageLink = document.getElementById('image-link');
-          imageLink.addEventListener('click', function () {
-            window.location.href = '#home'; // Replace with the desired URL or action
-          });
+          window.addEventListener('scroll', updateHeaderState);
+
         </script>
+
 
         <div data-role="MobileMenu" class="home-mobile-menu">
           <div class="home-nav2">
@@ -233,17 +241,17 @@
 
             </div>
             <div class="home-nav3">
-              <a href="index.html" class="home-navlink1 button">Home</a>
+              <a href="#home" class="home-navlink1 button">Home</a>
               <a href="testimonals.html" class="home-navlink1 button">Testimonials</a>
               <a href="faq.html" class="home-navlink1 home-active button">FAQ</a>
-              <a href="call.html" class="home-navlink2 button">Book A Call</a>
+              <a href="call.html" class="home-navlink1 button">Book A Call</a>
             </div>
           </div>
         </div>
       </header>
 
       <div class="faq-container1">
-        <h2 class="title-text">Frequently Asked Questions</h2>
+        <h2 class="home-text" style="margin-bottom: 100px;">Frequently Asked Questions</h2>
 
         <div style="visibility: hidden; position: absolute; width: 0px; height: 0px;">
           <svg xmlns="http://www.w3.org/2000/svg">
@@ -369,7 +377,7 @@
                   otherDetails.open = false;
                 }
               });
-              console.log(details.scrollHeight + 'px'+ "open?");
+              console.log(details.scrollHeight + 'px' + "open?");
               details.style.height = details.scrollHeight + 'px';
             } else {
               console.log(getComputedStyle(details).getPropertyValue('min-height') + "close?");
@@ -379,14 +387,18 @@
         });
       </script>
 
-      <div class="right-div">
-        <h2 class="faq-text01">Cant Find The Answer ?</h2>
-        <p class="faq-text02"> Book A Call Using Our Online Form And We'll answer any questions you have!</p>
-        <a href="call.html" class="primary-pink-button-button button ButtonSmall">Book A Call</a>
+      <div class="footer-top">
+        <div class="footer-top-inner">
+          <div class="footer-top-content">
+            <h2 class="faq-text01">Cant Find The Answer ?</h2>
+            <p class="faq-text02"> Book A Call Using Our Online Form And We'll answer any questions you have!</p>
+            <a href="call.html" class="primary-pink-button-button button ButtonSmall">Book A Call</a>
+          </div>
+        </div>
       </div>
 
       <footer class="footer-gray-footer footer-gray-root-class-name1">
-        <div class="footer-gray-divider"></div>
+
         <div class="footer-gray-container">
           <div class="footer-gray-container1">
             <div class="footer-gray-container2">

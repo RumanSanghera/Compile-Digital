@@ -289,7 +289,6 @@ details[open] summary {
   opacity: 0; /* Hide the element initially */
   transform: translateX(-100%); /* Move the element outside the viewport */
   animation: slide-in 0.5s forwards; 
-  animation-delay: 1s; 
   font-style: 'Outfit';
 
 }
@@ -315,19 +314,36 @@ details[open] summary {
  margin-top: 20px;
 }
 
-.right-div {
+.footer-top {
+  background: linear-gradient(to bottom, transparent 50%, var(--dl-color-gray-900) 50%);
+  width: 100%;
+  min-height: 300px;
+  height: auto;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.footer-top-inner {
   background-image: url(https://d3f86pfw66amx.cloudfront.net/uncode/wp-content/uploads/2023/06/grid-light.svg);
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: scroll;
   background-size: initial;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(0 0 0 / 0%);
+  border-radius: 5px;
+  min-height: 300px;
+  height: auto;
+  width: 50%;
+}
+.footer-top-content{
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 2%;  
-  height: 400px;
+ 
 }
 
 .right-content {
@@ -496,7 +512,9 @@ details[open] summary {
   flex-direction: column;
   margin-top: 170px;
   height: auto;
-  min-height: 80vh;
+  min-height: 60vh;
+  margin-top: 140px;
+  margin-bottom: 100px;
 }
 
 .faq-burger-menu {
@@ -598,15 +616,6 @@ details[open] summary {
 }
 
 @media(max-width: 767px) {
-  
-    .left-div{
-      flex-basis: 100%;
-    }
-    .right-div {
-    
-      display: none;
-    }
-    
 .title-text{
   font-size: 2rem;
   margin: 130px 0px 50px 0px;

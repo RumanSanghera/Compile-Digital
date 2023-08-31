@@ -44,9 +44,9 @@
   --linear-grad: linear-gradient(310deg, rgb(121, 40, 202), rgb(255, 0, 128));
   --body: rgb(251, 251, 251);
 }
-
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden; 
 }
 .Cursor {
   pointer-events: "none";
