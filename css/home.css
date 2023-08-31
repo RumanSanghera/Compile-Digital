@@ -785,14 +785,11 @@ body {
 
   justify-content: center;
   background-color: var(--body);
-
   transition: background-color 0.3s, box-shadow 0.3s;
-
 }
 
 .header-shadow{
   box-shadow: 0px 1px 10px 0px rgb(73 70 70 / 55%);
-
 }
 
 @keyframes fadeInTop {
