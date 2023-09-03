@@ -1939,7 +1939,9 @@ body {
   max-width: 100vw;
 }
 .timeline{
-  max-width: 1000px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  max-width: 100%; 
   margin: 0 auto;
   margin-bottom: 150px;
 }
@@ -2204,14 +2206,25 @@ input::placeholder {
     }
   
   .timeline ul li {
-    margin-left: 20px;
+    margin-left: 0px;
   }
   .timeline ul li div {
     width: 80vw;
   }
   .timeline ul li:nth-of-type(even) > div {
-    left: 45px;
+    left: 5px;
   }
+  .timeline ul li:nth-of-type(odd) > div {
+    left: 5px;
+  }
+  .timeline ul li div {
+   /* width: 90%;  Adjust the width to a percentage that fits well */
+  }
+  
+  * .timeline{
+    transition: none;
+  }
+
   
   
   .home-text {
