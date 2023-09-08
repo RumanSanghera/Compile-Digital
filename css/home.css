@@ -220,6 +220,7 @@ body {
   padding: 30px;
   position: relative;
   z-index: 1;
+  min-height: 300px;
 }
 
 .container.text-center .item {
@@ -1970,7 +1971,7 @@ body {
   width: 400px;
   padding: 20px;
   background: #fff;
-  box-shadow: 4px 13px 30px 1px rgb(246 214 255 / 25%);
+  box-shadow: -1px 14px 20px 4px rgb(0 0 0 / 25%);
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -2098,6 +2099,10 @@ input::placeholder {
 }
 
 @media(max-width: 991px) {
+  .container .item {
+    min-height: 360px;
+    padding: 15px;
+  }
   .footer-gray-container {
     padding: var(--dl-space-space-doubleunit);
   }
@@ -2326,6 +2331,12 @@ input::placeholder {
   }
   .home-div{
     margin-top: 125px;
+  }
+  
+}
+@media (max-width: 576px){
+  .container .item {
+    min-height: 50px;
   }
   
 }
